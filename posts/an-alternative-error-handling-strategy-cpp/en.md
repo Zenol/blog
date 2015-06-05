@@ -8,10 +8,10 @@ Error handling
 Hi. This short post is to talk about a subject that should interest many
 programers: error handling.
 
-Error handling is the "dar side" of programming. It is both the heart of
+Error handling is the "dark side" of programming. It is both the heart of
 "real world" applications, and the hard stuff you would like to hide.
 
-Since the "C years", I know three big way of handling errors.
+Since the C years, I know three big way of handling errors.
 
 Do it C-style: return code
 ===========================
