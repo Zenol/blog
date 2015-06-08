@@ -1,4 +1,4 @@
-Title:  Boite à musique
+﻿Title:  Boite à musique
 Author: Jérémy Cochoy
 Date:   2013/08/16
 
@@ -1303,8 +1303,8 @@ Extrait sonore du code de démonstration
 
 Pour vous montrer que je ne plaisante pas quand à la polyphonie, voici deux extraits utilisant 2 canaux. (Bon, le dernier accord en utilise 3, mais on ne s'en rend pas compte.)
 
-[Première partie](arduino_tetris.mp3)
-[Seconde partie](arduino_tetris_effects.mp3)
+[Première partie](data/arduino_tetris.mp3)
+[Seconde partie](data/arduino_tetris_effects.mp3)
 
 Pour aller plus loin
 ====================
