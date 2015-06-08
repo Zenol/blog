@@ -1,27 +1,27 @@
-Title:  Boite à musique
-Author: Jérémy Cochoy
+Title:  Boite Ã  musique
+Author: JÃ©rÃ©my Cochoy
 Date:   2013/08/16
 
-Dans la lignée du dépoussiérage de vieux codes, j'ai ressorti un jeu de quelques fonctions pour arduino que je n'ai pas eu le temps de publier. Il s'agit d'une certaine façon d'une bibliothèque similaire à la lib "Tone" fournie avec l'Arduino. Toutefois, contrairement à cette dernière, c'est bien un instrument polyphonique dont vous disposez. À dire vrai, il y a 4 canaux d'onde carré, et un canal de bruit. On peut de plus régler l'amplitude sonore de chacun des canaux entre 0 (minimum) et 255 (maximum). Il y a tout de même une contrainte ; la somme des amplitudes ne doit pas excéder 255. Ainsi, jouer de la musique est relativement simple. Il suffit de choisir la fréquence et l'amplitude de chaque canal, puis d'attendre un certain laps de temps (fonction delay fournis avec les libs de l'arduino) avant de recommencer. Le bruit est généré grâce à une table de valeurs aléatoires près-calculés, pour des raisons de performances. Vous pouvez réduire ou augmenter la taille de cette table à votre guise, un "script C++"(trop peu de lignes pour parler de programme) permettant de générer le header.
+Dans la lignÃ©e du dÃ©poussiÃ©rage de vieux codes, j'ai ressorti un jeu de quelques fonctions pour arduino que je n'ai pas eu le temps de publier. Il s'agit d'une certaine faÃ§on d'une bibliothÃ¨que similaire Ã  la lib "Tone" fournie avec l'Arduino. Toutefois, contrairement Ã  cette derniÃ¨re, c'est bien un instrument polyphonique dont vous disposez. Ã€ dire vrai, il y a 4 canaux d'onde carrÃ©, et un canal de bruit. On peut de plus rÃ©gler l'amplitude sonore de chacun des canaux entre 0 (minimum) et 255 (maximum). Il y a tout de mÃªme une contrainte ; la somme des amplitudes ne doit pas excÃ©der 255. Ainsi, jouer de la musique est relativement simple. Il suffit de choisir la frÃ©quence et l'amplitude de chaque canal, puis d'attendre un certain laps de temps (fonction delay fournis avec les libs de l'arduino) avant de recommencer. Le bruit est gÃ©nÃ©rÃ© grÃ¢ce Ã  une table de valeurs alÃ©atoires prÃ¨s-calculÃ©s, pour des raisons de performances. Vous pouvez rÃ©duire ou augmenter la taille de cette table Ã  votre guise, un "script C++"(trop peu de lignes pour parler de programme) permettant de gÃ©nÃ©rer le header.
 
-Tout ceci est plutôt abstrait, alors regardons cela de plus près.
+Tout ceci est plutÃ´t abstrait, alors regardons cela de plus prÃ¨s.
 
 Montage de test :
 =================
 
-Le montage de test est très similaire à celui du tutoriel tone. Seul change le port sur lequel vous devez connecter votre speacker.
+Le montage de test est trÃ¨s similaire Ã  celui du tutoriel tone. Seul change le port sur lequel vous devez connecter votre speacker.
 
 [![Montage arduino](data/music_box_arduino.png)](data/music_box_arduino.png)
 
-Donc, une résistance d'une centaine d'ohms (prenez ce que vous avez sous la main, plus la résistance sera élevée, moins le volume le sera) reliée à un speacker, ou bien à une prise JACK pour brancher vos enceintes favorites.
+Donc, une rÃ©sistance d'une centaine d'ohms (prenez ce que vous avez sous la main, plus la rÃ©sistance sera Ã©levÃ©e, moins le volume le sera) reliÃ©e Ã  un speacker, ou bien Ã  une prise JACK pour brancher vos enceintes favorites.
 
-Si vous souhaitez changer le port de sortie, il vous faudra toucher au code (et au code asm aussi :/) car le code utilise un mécanisme de l'ATMEGA328P qui n'est disponible que sur les ports 11, 10, 9, 6, 5 et 3 de l'arduino (ceux marqués d'une petite vague). De plus, si vous souhaitez utiliser le port 3 conjointement à ce code, vous risquez d'avoir quelques soucis. (Ces ports sont regroupés en paires, et chaque port d'une paire ne peut émettre un signal qu'à la même fréquence. Vous ne pourrez pas non plus utiliser l'interruption du timer 2, utilisé par ces deux ports. Ici, le code utilise la fréquence maximum possible, donc cela ne devrait à priori pas poser de soucis pour les utilisations les plus simples du port 3, comme contrôler l'intensité lumineuse d'une led).
+Si vous souhaitez changer le port de sortie, il vous faudra toucher au code (et au code asm aussi :/) car le code utilise un mÃ©canisme de l'ATMEGA328P qui n'est disponible que sur les ports 11, 10, 9, 6, 5 et 3 de l'arduino (ceux marquÃ©s d'une petite vague). De plus, si vous souhaitez utiliser le port 3 conjointement Ã  ce code, vous risquez d'avoir quelques soucis. (Ces ports sont regroupÃ©s en paires, et chaque port d'une paire ne peut Ã©mettre un signal qu'Ã  la mÃªme frÃ©quence. Vous ne pourrez pas non plus utiliser l'interruption du timer 2, utilisÃ© par ces deux ports. Ici, le code utilise la frÃ©quence maximum possible, donc cela ne devrait Ã  priori pas poser de soucis pour les utilisations les plus simples du port 3, comme contrÃ´ler l'intensitÃ© lumineuse d'une led).
 
 Fonctionnement de la Lib
 ========================
 
-L'utilisation se fait via le header Synth_8bits.h qui définit plusieurs variables globales essentielles au fonctionnement.
-Dans un premier temps, il faut initialiser la lib en appelant `synth_setup();`. Par la suite, vous disposez de 4 variables de période / fréquences :
+L'utilisation se fait via le header Synth_8bits.h qui dÃ©finit plusieurs variables globales essentielles au fonctionnement.
+Dans un premier temps, il faut initialiser la lib en appelant `synth_setup();`. Par la suite, vous disposez de 4 variables de pÃ©riode / frÃ©quences :
 ``` {.c}
 extern int square1_period;
 extern int square2_period;
@@ -29,18 +29,18 @@ extern int square3_period;
 extern int square4_period;
 ```
 
-En fait, c'est la période de l'onde qui est stockée, exprimée en 62500ième de seconde. Une macro, frequency_to_period(f), s'occupe de convertir une fréquence f (en Hz) en une période. Un exemple d'utilisation serait :
+En fait, c'est la pÃ©riode de l'onde qui est stockÃ©e, exprimÃ©e en 62500iÃ¨me de seconde. Une macro, frequency_to_period(f), s'occupe de convertir une frÃ©quence f (en Hz) en une pÃ©riode. Un exemple d'utilisation serait :
 ``` {.c}
-square1_period = frequency_to_period(440); //Le LA de référence est à 440Hz
+square1_period = frequency_to_period(440); //Le LA de rÃ©fÃ©rence est Ã  440Hz
 ```
 
-De nombreuses macros et un tableau sont là pour vous permettre de choisir une note de façon plus agréable :
+De nombreuses macros et un tableau sont lÃ  pour vous permettre de choisir une note de faÃ§on plus agrÃ©able :
 ``` {.c}
-square1_period = frequency_to_period(NOTE_A4); //Pour encoder, directement dans votre code, une mélodie
-square1_period = frequency_to_period(note_table[BNOTE_A4]); //Pour pouvoir facilement générer des mélodies à partir d'algorithmes.
+square1_period = frequency_to_period(NOTE_A4); //Pour encoder, directement dans votre code, une mÃ©lodie
+square1_period = frequency_to_period(note_table[BNOTE_A4]); //Pour pouvoir facilement gÃ©nÃ©rer des mÃ©lodies Ã  partir d'algorithmes.
 ```
 
-Reste un détail important : le volume de sortie! Il se fait à l'aide des
+Reste un dÃ©tail important : le volume de sortie! Il se fait Ã  l'aide des
 ``` {.c}
 extern unsigned char square1_amplitude;
 extern unsigned char square2_amplitude;
@@ -48,22 +48,22 @@ extern unsigned char square3_amplitude;
 extern unsigned char square4_amplitude;
 ```
 
-Où vous pouvez choisir une amplitude sonore entre 0 (pas de son) et 255 (volume maximum). Attention ! La somme des volumes de tous les canaux doit être inférieure à 255 ! (Sinon et ben, ça sera moche et tout sauf musical ;) ).
+OÃ¹ vous pouvez choisir une amplitude sonore entre 0 (pas de son) et 255 (volume maximum). Attention ! La somme des volumes de tous les canaux doit Ãªtre infÃ©rieure Ã  255 ! (Sinon et ben, Ã§a sera moche et tout sauf musical ;) ).
 
-Vous pouvez ainsi créer vos propres instruments en superposant différentes fréquences, et en modifiant le volume des canaux au cours du temps (par exemple, si vous voulez un son qui s'atténue, décrémentez petit à petit l'amplitude jusqu'à ce qu'elle atteigne 0). Le second exemple sonore exploite cette possibilité.
+Vous pouvez ainsi crÃ©er vos propres instruments en superposant diffÃ©rentes frÃ©quences, et en modifiant le volume des canaux au cours du temps (par exemple, si vous voulez un son qui s'attÃ©nue, dÃ©crÃ©mentez petit Ã  petit l'amplitude jusqu'Ã  ce qu'elle atteigne 0). Le second exemple sonore exploite cette possibilitÃ©.
 
 Pour les percussions, il y a le canal de bruit.
 ``` {.c}
 extern unsigned char noise_amplitude;
 ```
-C'est un canal qui émet un son similaire à celui d'un vieux téléviseur sans antennes, un "Tshhhhh" très caractéristique. À nouveau, en faisant varier l'amplitude (on parle de modulation d'amplitude), vous pouvez créer le timbre de divers instruments de percussion. La fonction `play_seawave();` est un exemple.
+C'est un canal qui Ã©met un son similaire Ã  celui d'un vieux tÃ©lÃ©viseur sans antennes, un "Tshhhhh" trÃ¨s caractÃ©ristique. Ã€ nouveau, en faisant varier l'amplitude (on parle de modulation d'amplitude), vous pouvez crÃ©er le timbre de divers instruments de percussion. La fonction `play_seawave();` est un exemple.
 
-Le bruit est près calculé grâce au programme C++ *generate_white_noise.cpp.src* (qui n'est autre qu'un fichier .cpp). Vous pouvez le bidouiller pour diminuer ou agrandir la table.
+Le bruit est prÃ¨s calculÃ© grÃ¢ce au programme C++ *generate_white_noise.cpp.src* (qui n'est autre qu'un fichier .cpp). Vous pouvez le bidouiller pour diminuer ou agrandir la table.
 
 Code et exemple de test
 =======================
 
-Voici le code directement dans ce billet, et sous la forme d'un tar un peu plus loin. Les commentaires sont plutôt explicites :
+Voici le code directement dans ce billet, et sous la forme d'un tar un peu plus loin. Les commentaires sont plutÃ´t explicites :
 
 ``` {.c}
 // Synth_8bits.h :
@@ -1298,18 +1298,18 @@ void loop()
 
 Le tar.gz : [synth_8bits.tar](data/synth_8bits.tar.gz).
 
-Extrait sonore du code de démonstration
+Extrait sonore du code de dÃ©monstration
 =======================================
 
-Pour vous montrer que je ne plaisante pas quand à la polyphonie, voici deux extraits utilisant 2 canaux. (Bon, le dernier accord en utilise 3, mais on ne s'en rend pas compte.)
+Pour vous montrer que je ne plaisante pas quand Ã  la polyphonie, voici deux extraits utilisant 2 canaux. (Bon, le dernier accord en utilise 3, mais on ne s'en rend pas compte.)
 
-[Première partie](arduino_tetris.mp3)
+[PremiÃ¨re partie](arduino_tetris.mp3)
 [Seconde partie](arduino_tetris_effects.mp3)
 
 Pour aller plus loin
 ====================
 
-N'hésitez pas à supprimer quelques canaux, comme le 4ième canal, si vous ne l'utilisez pas et trouvez que votre application est trop lente (i.e. supprimer le bloc de code suivant).
+N'hÃ©sitez pas Ã  supprimer quelques canaux, comme le 4iÃ¨me canal, si vous ne l'utilisez pas et trouvez que votre application est trop lente (i.e. supprimer le bloc de code suivant).
 ```{c.}
   //---------------
   //-  SQUARE  4  -
@@ -1318,13 +1318,13 @@ N'hésitez pas à supprimer quelques canaux, comme le 4ième canal, si vous ne l'ut
   //---------------
 ```
 
-Vous pouvez aussi supprimer le canal de bruit et le tableau white_noise.h pour gagner un peu de mémoire. Bref, faite ce que vous voulez de ce code!
+Vous pouvez aussi supprimer le canal de bruit et le tableau white_noise.h pour gagner un peu de mÃ©moire. Bref, faite ce que vous voulez de ce code!
 
-Quelques références :
+Quelques rÃ©fÃ©rences :
 =====================
 
 Plus sur le PWM :
 - <http://arduino.cc/en/Tutorial/SecretsOfArduinoPWM">
-- [L'article sur le PWM :)](http://zenol.fr/site/2012/05/03/atmega328-arduino-uno-timercounter-pwm-a-625khz/ "ATMega328 (Arduino uno) : Timer/Counter & PWM à 62,5kHz")
+- [L'article sur le PWM :)](http://zenol.fr/site/2012/05/03/atmega328-arduino-uno-timercounter-pwm-a-625khz/ "ATMega328 (Arduino uno) : Timer/Counter & PWM Ã  62,5kHz")
 Plus sur Tone :
 - <http://arduino.cc/en/Tutorial/Tone>
