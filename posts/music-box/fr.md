@@ -1310,7 +1310,7 @@ Pour aller plus loin
 ====================
 
 N'hésitez pas à supprimer quelques canaux, comme le 4ième canal, si vous ne l'utilisez pas et trouvez que votre application est trop lente (i.e. supprimer le bloc de code suivant).
-```{c.}
+```{.c}
   //---------------
   //-  SQUARE  4  -
   //---------------
@@ -1324,7 +1324,7 @@ Quelques références :
 =====================
 
 Plus sur le PWM :
-- <http://arduino.cc/en/Tutorial/SecretsOfArduinoPWM">
+- <http://arduino.cc/en/Tutorial/SecretsOfArduinoPWM>
 - [L'article sur le PWM :)](http://zenol.fr/site/2012/05/03/atmega328-arduino-uno-timercounter-pwm-a-625khz/ "ATMega328 (Arduino uno) : Timer/Counter & PWM à 62,5kHz")
 Plus sur Tone :
 - <http://arduino.cc/en/Tutorial/Tone>
