@@ -4,7 +4,7 @@ Date: 2013/05/01
 
 Et voici la troisième et dernière partie de notre découverte de ce joli langage. Au programme : des super foncteurs. D'abord des foncteurs applicatifs, puis des monades! Si vous rêviez de savoir pourquoi tant de gens s’enflamment devant ce langage, il est peut-être venue l'heure de la révélation.
 
-La [première partie est ici](http://zenol.fr/site/2013/04/16/le-haskell-un-language-au-label-pure-13/ "Le Haskell, un langage au label pure. Première partie."), [la seconde là](http://zenol.fr/site/2013/04/26/le-haskell-un-langage-au-label-pure-seconde-partie/ "Le Haskell, un langage au label pure. Seconde partie.").
+La [première partie est ici](http://zenol.fr/site/blog/posts/haskell-pure-1/fr.htm "Le Haskell, un langage au label pure. Première partie."), [la seconde là](http://zenol.fr/site/blog/posts/haskell-pure-2/fr.htm "Le Haskell, un langage au label pure. Seconde partie.").
 
 Foncteurs applicatifs
 =====================
