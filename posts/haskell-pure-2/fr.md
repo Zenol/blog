@@ -49,10 +49,10 @@ liste_des_entiers_paires' = [x | x <- [1..], x `mod` 2 == 0]
 
 -- On peut utiliser plusieurs variables se baladant dans différentes listes :
 liste_de_produit = [x * y | x <- [1..5], y <- [1..]]
-</pre>
+```
 
 Une autre façon de définir une liste est d'utiliser la récusivité. Voici quelques exemples.
-<pre lang="haskell" colla="+">
+``` {.haskell}
 --"map f l" applique la fonction f sur chaque élément de la liste l
 -- [a, b] est du sucre syntaxique pour a : b : [].
 entiers = 1 : (map (1+) entiers)
