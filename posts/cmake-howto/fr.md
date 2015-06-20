@@ -68,6 +68,5 @@ Conclusion :
 Ce qu'il faut retenir, c'est que CMake est simple à configurer, offre de nombreuses fonctionnalités, et laisse la possibilité d'ajouter celles manquantes. Beaucoup de gens sont encore habitué au ./configure, et sont effrayé par cette nouvelle façon d'aborder ce problème. Pourtant, CMake est un réel gain de temps, et l'on voit des gros projets comme KDE changer de build system pour CMake.  On peux même l'utiliser pour de minuscule projets (compiler les .cpp d'un dossier en un exécutable, sans dépendances particulières, se fait avec un fichier de configuration de 3 lignes), et je vous encourage justement à le faire. Trois lignes pour avoir une gestion automatique des dépendances des .h, génération des makefiles, le tout multiplateforme, ce n'est pas cher payé.
 
 Resources :
-
-<http://en.wikipedia.org/wiki/CMake>
-<http://www.cmake.org/cmake/help/cmake_tutorial.html>
+  * <http://en.wikipedia.org/wiki/CMake>
+  * <http://www.cmake.org/cmake/help/cmake_tutorial.html>
