@@ -213,9 +213,9 @@ ___Point culture :___ Et si l'on veux un foncteur contravariant en haskell? On p
 Références :
 ------------
 
-Catégories : <http://fr.wikipedia.org/wiki/Th%C3%A9orie_des_cat%C3%A9gories>
-Foncteurs : <http://fr.wikipedia.org/wiki/Foncteur>
-Apprendre Haskell vous fera le plus grand bien : <http://lyah.haskell.fr/<> ou <http://learnyouahaskell.com>
-Real World Haskell : <http://book.realworldhaskell.org/read/>
-Haskell "kind" : <http://www.haskell.org/haskellwiki/Kind> (type `:k Maybe` and `:k Bool` on GHCI)
-La classe functor : <http://en.wikibooks.org/wiki/Haskell/The_Functor_class>
+  * Catégories : <http://fr.wikipedia.org/wiki/Th%C3%A9orie_des_cat%C3%A9gories>
+  * Foncteurs : <http://fr.wikipedia.org/wiki/Foncteur>
+  * Apprendre Haskell vous fera le plus grand bien : <http://lyah.haskell.fr/<> ou <http://learnyouahaskell.com>
+  * Real World Haskell : <http://book.realworldhaskell.org/read/>
+  * Haskell "kind" : <http://www.haskell.org/haskellwiki/Kind> (type `:k Maybe` and `:k Bool` on GHCI)
+  * La classe functor : <http://en.wikibooks.org/wiki/Haskell/The_Functor_class>
