@@ -1,4 +1,4 @@
-Title: Arduino Uno with ArchLinux (3.8.4-1-ARCH)
+ï»¿Title: Arduino Uno with ArchLinux (3.8.4-1-ARCH)
 Author: Jérémy Cochoy
 Date: 2013/03/31
 
