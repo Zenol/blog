@@ -1,5 +1,5 @@
 ï»¿Title: Arduino Uno with ArchLinux (3.8.4-1-ARCH)
-Author: Jérémy Cochoy
+Author: JÃ©rÃ©my Cochoy
 Date: 2013/03/31
 
 I quickly explain how to make your arduino card works with your ArchLinux distrib by patching and installing the last version of rxtx.
@@ -69,7 +69,7 @@ Some informations
 
 We disable the flag --diseable-lockfile so that errors messages diseapear speaking about the impossibility to write lock files. We also added the right .h file containing UTS_RELEASE to remove stupid compiling errors (the file in wich the macro is defined changed recently). To finish, we had to modify rxtx's code (read the comments, they ask you to add missing devices) so that you can use ttyACMx. An other solution would be to add a symbolic link in /dev/ from a ttyUSBx to a ttyACMx.
 
-Anyway, if you can't use your arduino, and you have an error of the style `processing.app.SerialNotFoundException: [..] « /dev/ttyACM0 » not found`, it's probably that ttyACM is not in the list of rxtx's devices.
+Anyway, if you can't use your arduino, and you have an error of the style `processing.app.SerialNotFoundException: [..] Â«Â /dev/ttyACM0Â Â» not found`, it's probably that ttyACM is not in the list of rxtx's devices.
 
 References :
   * <http://arduino.cc/en/Guide/troubleshooting#toc1> Drivers / Linux.
