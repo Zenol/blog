@@ -1,5 +1,5 @@
-Title: Raspbery PI with HDMI
-Author: Jérémy Cochoy
+ï»¿Title: Raspbery PI with HDMI
+Author: JÃ©rÃ©my Cochoy
 Date: 2012/08/12
 
 Hi,
@@ -16,7 +16,7 @@ hdmi_force_hotplug=1
 disable_overscan=0
 ```
 
-After adding and uncommenting those lines in the config.txt file, it worked fine (although I still  have to push the auto button of my screen to tell him something great is coming from HDMI input).
+After adding and uncommenting those lines in the config.txt file, it worked fine (although I still have to push the auto button of my screen to tell him something great is coming from HDMI input).
 
 I can't tell exactly what was the problem (signal too low to be recognized, bad display mode, or something else) but then it works fine, and now I'll have to wait for a USB keyboard :)
 
