@@ -1,4 +1,5 @@
 ﻿Title: GDT & IDT
+Author: Jérémy Cochoy
 Date: 2009/04/20
 
 Bonjour,
