@@ -77,3 +77,9 @@ En plus, il n' est pas un, mais ils sont deux, en cascade (Un esclave et un maî
 
 Une fois le tout configurer, on réactive les interruption et...
 On cherche pourquoi ça n' a pas fonctionner :)
+
+4 : Références
+==============
+
+Pour lire un peu de code, vous pouvez jeter un oeil au dépôt
+ git <https://github.com/Zenol/kos/>.
