@@ -1,24 +1,24 @@
-Title: Calculer $a^n$ en temps $log_2(n)$
-Author: Jérémy Cochoy
+ï»¿Title: Calculer $a^n$ en temps $log_2(n)$
+Author: JÃ©rÃ©my Cochoy
 Date: 2009/10/19
 
 Introduction
 ============
 
-Aujourd'hui, un petit article sans grande prétention pour évoquer une petite astuce que je dois à mon prof d'algo.
+Aujourd'hui, un petit article sans grande prÃ©tention pour Ã©voquer une petite astuce que je dois Ã  mon prof d'algo.
 
 
-__Trouvez un algo de calcul de $a^n\mid n\in\mathbb{N}, a\in\mathbb{R}$ avec un complexité inférieur à n__
+__Trouvez un algo de calcul de $a^n\mid n\in\mathbb{N}, a\in\mathbb{R}$ avec un complexitÃ© infÃ©rieur Ã  n__
 
-En réalité, ce n'est pas si compliqué. b peut se décomposer aisément en puissances de deux via un masque binaire que l'on fait courir de droite à gauche, jusqu'à ce que la valeur de ce masque dépasse n. A chaque décalage du masque, on met au carré une même variable initialisée avec $a$ et si $masque \& b \not= 0$ on multiplie le résultat actuel par cette dernière.
+En rÃ©alitÃ©, ce n'est pas si compliquÃ©. b peut se dÃ©composer aisÃ©ment en puissances de deux via un masque binaire que l'on fait courir de droite Ã  gauche, jusqu'Ã  ce que la valeur de ce masque dÃ©passe n. A chaque dÃ©calage du masque, on met au carrÃ© une mÃªme variable initialisÃ©e avec $a$ et si $masque \& b \not= 0$ on multiplie le rÃ©sultat actuel par cette derniÃ¨re.
 
-Concrètement :
+ConcrÃ¨tement :
 ==============
 
 ```{.c}
 #define MATH_IF(r, a, b)        ((1 - (r)) * (b) + (r) * (a))
 
-//Décompose b en puissances de deux
+//DÃ©compose b en puissances de deux
 // ex: a^7 = a^(1+2+4) = a^(1*2^0 + 1*2^1 + 1*2^2)
 //Decimal<->Binaire 7dec = 111b
 //On fait courir un masque de droite a gauche, et si le bit est actif,
@@ -57,4 +57,4 @@ int     npow(int a, int b)
 }
 ```
 
-Voila, c'est le genre de petites curiosités algorithmique amusantes.
+Voila, c'est le genre de petites curiositÃ©s algorithmique amusantes.
