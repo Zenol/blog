@@ -10,11 +10,11 @@ OUTHF=$SITE"/index.htm"
 # --------------------------------------------
 # - HF
 touch $HF
-echo "# List of pages / Liste des pages" > $HF
+echo "## List of pages / Liste des pages" > $HF
 echo >> $HF
 echo "  * [Liste des developpements d'agregation](/site/blog/pages/agreg_dev.htm)" >> $HF
 echo >> $HF
-echo "# List of posts / Liste des billets" >> $HF
+echo "## List of posts / Liste des billets" >> $HF
 echo >> $HF
 
 # --------------------------------------------
@@ -71,6 +71,6 @@ cd ..
 # - HF
 
 pandoc -s $HF -c normalize.css -c bootstrap.css -A $SITE"/footer.htm" -t html5 -o $OUTHF
-sed -i "s/<body>/<body><div class=\"container\"><div class=\"page-header label\"><h1>Documents disponibles \/ Documents available<\/h1><\/div>/g" $OUTHF
+sed -i "s/<body>/<body><div class=\"container\"><h1>Documents disponibles \/ Documents available<\/h1>/g" $OUTHF
 sed -i "s/<footer/<\/div><footer/g" $OUTHF
 sed -i 's/<head>/<head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">/g' $OUTHF
