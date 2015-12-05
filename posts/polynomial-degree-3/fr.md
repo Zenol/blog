@@ -62,7 +62,7 @@ Puisque nous pouvons "répartir" notre solution "un peut dans u, le reste dans v
 
 On remarque alors que notre polynôme se simplifie, laissant apparaître $u^3 + v^3= -q$
 
-En d'autre termes, notre solution est donc solution du système $\begin{cases}u^3+v^3&amp;=-q\\ u^3v^3&amp;=-\frac{p^3}{27}\end{cases}$ (et doivent respecter en plus la condition $3uv+p = 0$).
+En d'autre termes, notre solution est donc solution du système $\begin{cases}u^3+v^3&=-q\\ u^3v^3&=-\frac{p^3}{27}\end{cases}$ (et doivent respecter en plus la condition $3uv+p = 0$).
 
 Vous remarquerez alors que connaissant le produit et la somme de deux nombres a et b, nous pouvons nous servir du polynôme du second dégrée $x^2 -(a + b)X + ab = 0$ qui a pour racines a et b. Appliquons ceci à $u^3$ et $v^3$
 
@@ -115,7 +115,7 @@ De façon générale, les racines nièmes d'un complexe d'argument arg(a) et de 
 
 Bref, de belles façons d'interpréter les choses, mais en quoi cela nous aide-il?
 
-Et bien, si nous pouvions connaître l'argument d'un complexe et son module, nous pourrions calculer numériquement l'argument et le module de ses racines, et ainsi trouver les valeurs possible pour u et v. Considérons donc nos solutions complexe comme les points d'un plan. Le module et l'argument forment alors leur coordonnées polaire. Nous avons le système suivant qui lit les coordonnées cartésiennes d'un point à ses coordonnées polaire : $\begin{cases}x&amp;=r cos(alpha)\\ y&amp;=r sin(alpha)\end{cases}$ De plus, nous pouvons calculer r, en appliquant le théorème de Pythagore. Si l'on fait alors le quotient de x par y, on obtient $tan(alpha)$. En fait, en étudiant le signe de x et de y, on peut connaitre le signe de alpha et donc utiliser atan (la réciproque de tangente, modulo le bonne ensemble de définition). (Pour se simplifier la tache en C, on peut utiliser la fonction tan2(x, y) qui effectue le quotient et tien compte des signes.)
+Et bien, si nous pouvions connaître l'argument d'un complexe et son module, nous pourrions calculer numériquement l'argument et le module de ses racines, et ainsi trouver les valeurs possible pour u et v. Considérons donc nos solutions complexe comme les points d'un plan. Le module et l'argument forment alors leur coordonnées polaire. Nous avons le système suivant qui lit les coordonnées cartésiennes d'un point à ses coordonnées polaire : $\begin{cases}x&=r cos(alpha)\\ y&=r sin(alpha)\end{cases}$ De plus, nous pouvons calculer r, en appliquant le théorème de Pythagore. Si l'on fait alors le quotient de x par y, on obtient $tan(alpha)$. En fait, en étudiant le signe de x et de y, on peut connaitre le signe de alpha et donc utiliser atan (la réciproque de tangente, modulo le bonne ensemble de définition). (Pour se simplifier la tache en C, on peut utiliser la fonction tan2(x, y) qui effectue le quotient et tien compte des signes.)
 
 Encore un dernier détaille, et nous avons terminé. Les solutions que nous trouverons pour u et v peuvent se classer par paire de conjugué (les racines de u et v correspondant a la même racine cubique de 1). On remarque alors que les solutions seront toute bien réel. (La partie imaginaire de chacun des conjugué s'annulant.) Bien, passons à l'implémentation :
 ```{.c}
