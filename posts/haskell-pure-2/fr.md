@@ -146,7 +146,7 @@ Donc, pour résumer : La collection de tous les types haskell est une catégorie
 
 __Les foncteurs (covariants) :__ Un foncteur $$F$$ d'une catégorie $$\mathcal{C}$$ vers une catégorie $$\mathcal{D}$$ est :
 
-  1) Pour chaque semble $$A$$ de $$\mathcal{C}$$, un ensemble de $$$\mathcal{D}$$ qu'on noteras $$F(A)$$.
+  1) Pour chaque semble $$A$$ de $$\mathcal{C}$$, un ensemble de $$\mathcal{D}$$ qu'on noteras $$F(A)$$.
 
   2) Pour chaque flèche $f : A \to B$ entre des ensembles de $$\mathcal{C}$$, une flèche $$F(A) \to F(B)$$ qu'on noteras $$F(f)$$.
 
