@@ -63,7 +63,7 @@ extrêmement claires) ; le compteur TCNT2 seras incrémenté de 1 tout
 les N ticks d'horloge, où la valeur de n dépend du facteur d'échelle choisit,
 d'après le tableau suivant (p164 de la documentation) :
 
-[Clock Select Bit Description](data/csb_desc.png)
+![Clock Select Bit Description](data/csb_desc.png)
 
 
 Activer la sortie PWM
