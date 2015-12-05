@@ -67,10 +67,11 @@ You can now launch the arduino IDE (command arduino) and upload a test sketch (l
 Some informations
 =================
 
-We disable the flag --diseable-lockfile so that errors messages diseapear speaking about the impossibility to write lock files. We also added the right .h file containing UTS_RELEASE to remove stupid compiling errors (the file in wich the macro is defined changed recently). To finish, we had to modify rxtx's code (read the comments, they ask you to add missing devices) so that you can use ttyACMx. An other solution would be to add a symbolic link in /dev/ from a ttyUSBx to a ttyACMx.
+We disable the flag `--diseable-lockfile` so that errors messages diseapear speaking about the impossibility to write lock files. We also added the right .h file containing `UTS_RELEASE` to remove stupid compiling errors (the file in wich the macro is defined changed recently). To finish, we had to modify rxtx's code (read the comments, they ask you to add missing devices) so that you can use ttyACMx. An other solution would be to add a symbolic link in /dev/ from a ttyUSBx to a ttyACMx.
 
 Anyway, if you can't use your arduino, and you have an error of the style `processing.app.SerialNotFoundException: [..] « /dev/ttyACM0 » not found`, it's probably that ttyACM is not in the list of rxtx's devices.
 
 References :
-  * <http://arduino.cc/en/Guide/troubleshooting#toc1> Drivers / Linux.
-  * <https://wiki.archlinux.org/index.php/Arduino>
+============
+ *  <http://arduino.cc/en/Guide/troubleshooting#toc1> Drivers / Linux.
+ *  <https://wiki.archlinux.org/index.php/Arduino>

@@ -73,10 +73,11 @@ Vous pouvez maintenant lancer l'IDE arduino (commande arduino) et charger un pro
 Quelques infos
 ==============
 
-On désactive l'option `--diseable-lockfile` pour faire disparaître des messages d'erreur parlant d'impossibilité d'écrire les fichiers de lock. On ajouter le bon fichier .h contenant UTS_RELEASE pour éviter de stupide erreur de compilation (le fichier dans le quel est définit la macro a changé récemment). Enfin, il est nécessaire de modifier le code de rxtx (lisez les commentaires, vous verez qu'on vous demande explicitement de rajouter les devices manquant, en vous proposant la liste de tous ceux possible, et elle est bien longue!) pour que vous puissiez utiliser ttyACMx. Une autre solution serait d'ajouter un lien symbolique dans /dev/ d'un ttyUSBx vers un ttyACMx, par exemple (ttyUSB figure dans le tableau o`u nous avons ajouter ttyACM).
+On désactive l'option `--diseable-lockfile` pour faire disparaître des messages d'erreur parlant d'impossibilité d'écrire les fichiers de lock. On ajouter le bon fichier .h contenant `UTS_RELEASE` pour éviter de stupide erreur de compilation (le fichier dans le quel est définit la macro a changé récemment). Enfin, il est nécessaire de modifier le code de rxtx (lisez les commentaires, vous verez qu'on vous demande explicitement de rajouter les devices manquant, en vous proposant la liste de tous ceux possible, et elle est bien longue!) pour que vous puissiez utiliser ttyACMx. Une autre solution serait d'ajouter un lien symbolique dans /dev/ d'un ttyUSBx vers un ttyACMx, par exemple (ttyUSB figure dans le tableau où nous avons ajouter ttyACM).
 
 Bref, en fin de compte, si vous ne parvenez pas à utiliser votre arduino et que vous avez une erreur du type `processing.app.SerialNotFoundException: Port série « /dev/ttyACM0 » non trouvé`, c'est peut-etre tout simplement que ttyACM ne figure pas dans les périphériques accepté par rxtx.
 
 Références :
-  * <http://arduino.cc/en/Guide/troubleshooting#toc1> Drivers / Linux.
-  * <https://wiki.archlinux.org/index.php/Arduino>
+============
+ *  <http://arduino.cc/en/Guide/troubleshooting#toc1> Drivers / Linux.
+ *  <https://wiki.archlinux.org/index.php/Arduino>
