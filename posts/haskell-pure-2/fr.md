@@ -134,29 +134,29 @@ Les foncteurs
 
 Les foncteurs (à nouveau, le terme est à prendre au sens e la théorie des catégories) constituent le point de départ vers les monades. Faisons un petit détour par les maths et définissons ce qu'est un foncteur (il n'est pas nécessaire de comprendre ce paragraphe pour la suite, c'est pour la culture).
 
-__La catégorie des types :___ Une catégorie $$\mathcal{C}$$ est une collection d'ensembles. Ici, on regarderas la collection de tous les types hasell possible. Un ensemble seras donc un type. Ses éléments seront les valeurs qui sont de ce type. Par exemple Int seras un semble et 1, 4, 6 sont des éléments de cette ensemble. Il n'y a que deux éléments dans l'ensemble Bool, et une infinité d'éléments pour Integer. Pour que ce soit une catégorie, il faut qu'étant donné deux ensembles de notre collection $$A$$ et $$B$$, il existes une ensemble d'applications de $$A \to B$$. Dans notre cas ce seras toute les _fonctions_ de type <i> A -> B </i>. On parle des "flèches de A vers B". Pour la culture, on note l'ensemble de ces applications $$Hom_{\mathcal{C}}(A, B)$$.
+__La catégorie des types :___ Une catégorie $\mathcal{C}$ est une collection d'ensembles. Ici, on regarderas la collection de tous les types hasell possible. Un ensemble seras donc un type. Ses éléments seront les valeurs qui sont de ce type. Par exemple Int seras un semble et 1, 4, 6 sont des éléments de cette ensemble. Il n'y a que deux éléments dans l'ensemble Bool, et une infinité d'éléments pour Integer. Pour que ce soit une catégorie, il faut qu'étant donné deux ensembles de notre collection $A$ et $B$, il existes une ensemble d'applications de $A \to B$. Dans notre cas ce seras toute les _fonctions_ de type <i> A -> B </i>. On parle des "flèches de A vers B". Pour la culture, on note l'ensemble de ces applications $Hom_{\mathcal{C}}(A, B)$.
 
 Attention, pour que ce soit vraiment une catégorie, il faut quelques conditions sur ces flèches :
 
-  1) Si $$ A $$ est un élément de $$ \mathcal{C} $$, alors il faut que l'identité soit une flèche. Dans notre cas, on veut que la fonction <i>id x = x</i> de type <i>A -> A</i> soit bien une fonction haskell. Ce qui est le cas, puisque je viens de vous donner le code haskell qui permet de la définir :)
+  1) Si $ A $ est un élément de $ \mathcal{C} $, alors il faut que l'identité soit une flèche. Dans notre cas, on veut que la fonction <i>id x = x</i> de type <i>A -> A</i> soit bien une fonction haskell. Ce qui est le cas, puisque je viens de vous donner le code haskell qui permet de la définir :)
 
-  2) Si $$ f: A \to B $$ et $$ g : B \to C $$ sont deux flèches (respectivement de $$ A $$ dans $$ B $$ et de $$ B $$ dans $$ C $$), alors la composé $$g \circ f$$ est une flèche de $$ A $$ dans $$ C $$. Dans le cas qui nous intéresse, cette règle est bien respectée car si `f` et `g` sont deux fonctions haskell, alors la composé est la fonction `\x -> g (f x)`, que l'on peut aussi écrire `f . g`.
+  2) Si $ f: A \to B $ et $ g : B \to C $ sont deux flèches (respectivement de $ A $ dans $ B $ et de $ B $ dans $ C $), alors la composé $g \circ f$ est une flèche de $ A $ dans $ C $. Dans le cas qui nous intéresse, cette règle est bien respectée car si `f` et `g` sont deux fonctions haskell, alors la composé est la fonction `\x -> g (f x)`, que l'on peut aussi écrire `f . g`.
 
 Donc, pour résumer : La collection de tous les types haskell est une catégorie. Si `a` et `b` sont deux types haskell, l'ensemble de toute les fonctions de `a -> b` sont appelés les flèches entre `a` et `b`.
 
-__Les foncteurs (covariants) :__ Un foncteur $$F$$ d'une catégorie $$\mathcal{C}$$ vers une catégorie $$\mathcal{D}$$ est :
+__Les foncteurs (covariants) :__ Un foncteur $F$ d'une catégorie $\mathcal{C}$ vers une catégorie $\mathcal{D}$ est :
 
-  1) Pour chaque semble $$A$$ de $$\mathcal{C}$$, un ensemble de $$\mathcal{D}$$ qu'on noteras $$F(A)$$.
+  1) Pour chaque semble $A$ de $\mathcal{C}$, un ensemble de $\mathcal{D}$ qu'on noteras $F(A)$.
 
-  2) Pour chaque flèche $f : A \to B$ entre des ensembles de $$\mathcal{C}$$, une flèche $$F(A) \to F(B)$$ qu'on noteras $$F(f)$$.
+  2) Pour chaque flèche $f : A \to B$ entre des ensembles de $\mathcal{C}$, une flèche $F(A) \to F(B)$ qu'on noteras $F(f)$.
 
-  3) Il faut que $$F(g \circ f) = F (g) \circ F(f)$$ et que $$F(id) = id$$. C'est à dire que composer des flèches avant transformation est la même chose que les composer après, et l'identité $$id: A \to A$$ (flèche qui ne fait rien) est bien envoyer sur l'identité $$id: F(A) -> F(A)$$.
+  3) Il faut que $F(g \circ f) = F (g) \circ F(f)$ et que $F(id) = id$. C'est à dire que composer des flèches avant transformation est la même chose que les composer après, et l'identité $id: A \to A$ (flèche qui ne fait rien) est bien envoyer sur l'identité $id: F(A) -> F(A)$.
 
-Un foncteur est donc une façon de transformer une catégorie $$\mathcal{C}$$ en une partie (sous-catégorie) de $$\mathcal{D}$$.
+Un foncteur est donc une façon de transformer une catégorie $\mathcal{C}$ en une partie (sous-catégorie) de $\mathcal{D}$.
 
 __Point culture (pour les curieux) :__ Les foncteurs contravariants sont simplement des foncteurs qui "renversent" les flèches, c'est à dire en transforment A -> B en F(A) <- F(B).</i>
 
-Ici, ce qui nous intéresse sont les foncteurs de $$\mathcal{C}$$ dans $$\mathcal{C}$$ (on dit des endofoncteurs). À partir de maintenant, on ne considère plus que la catégorie $$\mathcal{T}$$ des types haskell. Un foncteur `Fonc`, en haskell, est un foncteur de $$\mathcal{T}$$ dans $$\mathcal{T}$$. C'est à dire :
+Ici, ce qui nous intéresse sont les foncteurs de $\mathcal{C}$ dans $\mathcal{C}$ (on dit des endofoncteurs). À partir de maintenant, on ne considère plus que la catégorie $\mathcal{T}$ des types haskell. Un foncteur `Fonc`, en haskell, est un foncteur de $\mathcal{T}$ dans $\mathcal{T}$. C'est à dire :
 
   1) Une façon à tout type `a` d'associer un type `Fonc a`. Ainsi `Fonc` est un constructeur de type, par exemple `Liste` ou `Arbre` des exemples précédents. C'est peut-être le bon moment d'aller feuilleter quelques lien sur les constructeurs de type et leur "kind". Disons simplement qu'un type comme int ou bool est de kind `*` mais que Liste et Arbre sont de kind `* -> *`. Cela signifit que ces deux dernier mangent un type `T` et fabrique des nouveaux types `Liste T` et `Arbre T`. Liste n'est donc pas un type, mais un constructeur de type.
 
@@ -172,7 +172,7 @@ class  Functor f  where
     fmap        :: (a -> b) -> f a -> f b
 ```
 
-Remarquez que l'on peut lire `fmap :: (a -> b) -> (f a -> f b)` ce qui signifie : fmap(fonctorial mapping) prend une fonction de type `a -> b` et la transforme en une fonction de type `f a -> f b`. On a donc bien une transformation d'une flèche de a vers b en une flèche de $$f a$$ vers $$f b$$. Si l'on a donc un constructeur de type qui est instance de `Functor`, on a bien un endofoncteur de la catégorie des types. Maintenant que nous avons le sentiment que toutes nos considérations théoriques nous ont apporté une compréhension profonde du sujet, nous allons pouvoir les oublier et passer à la pratique.
+Remarquez que l'on peut lire `fmap :: (a -> b) -> (f a -> f b)` ce qui signifie : fmap(fonctorial mapping) prend une fonction de type `a -> b` et la transforme en une fonction de type `f a -> f b`. On a donc bien une transformation d'une flèche de a vers b en une flèche de $f a$ vers $f b$. Si l'on a donc un constructeur de type qui est instance de `Functor`, on a bien un endofoncteur de la catégorie des types. Maintenant que nous avons le sentiment que toutes nos considérations théoriques nous ont apporté une compréhension profonde du sujet, nous allons pouvoir les oublier et passer à la pratique.
 
 A quoi sert un foncteur : Un constructeur de type fonctoriel, c'est un constructeur de type où l'on sauras maper des fonctions. Si notre type Liste devient instance de `Functor`, et que l'on a un `Liste Int`, on peut construire rapidement une liste de tous ces nombres représenté par des chaines de caractères. Il suffit de disposer d'une fonction `Int -> String`. Haskell nous en fournis une, c'est `show`. Alors, on n'a plus qu'a appliquer cette fonction sur chacun des éléments de la liste par `map show liste`.
 
