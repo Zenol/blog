@@ -138,9 +138,9 @@ __La catégorie des types :___ Une catégorie $\mathcal{C}$ est une collection d
 
 Attention, pour que ce soit vraiment une catégorie, il faut quelques conditions sur ces flèches :
 
-  1) Si $ A $ est un élément de $ \mathcal{C} $, alors il faut que l'identité soit une flèche. Dans notre cas, on veut que la fonction <i>id x = x</i> de type <i>A -> A</i> soit bien une fonction haskell. Ce qui est le cas, puisque je viens de vous donner le code haskell qui permet de la définir :)
+  1) Si $A$ est un élément de $ \mathcal{C} $, alors il faut que l'identité soit une flèche. Dans notre cas, on veut que la fonction `id x = x` de type `A -> A` soit bien une fonction haskell. Ce qui est le cas, puisque je viens de vous donner le code haskell qui permet de la définir :)
 
-  2) Si $ f: A \to B $ et $ g : B \to C $ sont deux flèches (respectivement de $ A $ dans $ B $ et de $ B $ dans $ C $), alors la composé $g \circ f$ est une flèche de $ A $ dans $ C $. Dans le cas qui nous intéresse, cette règle est bien respectée car si `f` et `g` sont deux fonctions haskell, alors la composé est la fonction `\x -> g (f x)`, que l'on peut aussi écrire `f . g`.
+  2) Si $f: A \to B$ et $g : B \to C$ sont deux flèches (respectivement de $A$ dans $B$ et de $B$ dans $C$), alors la composé $g \circ f$ est une flèche de $A$ dans $C$. Dans le cas qui nous intéresse, cette règle est bien respectée car si `f` et `g` sont deux fonctions haskell, alors la composé est la fonction `\x -> g (f x)`, que l'on peut aussi écrire `f . g`.
 
 Donc, pour résumer : La collection de tous les types haskell est une catégorie. Si `a` et `b` sont deux types haskell, l'ensemble de toute les fonctions de `a -> b` sont appelés les flèches entre `a` et `b`.
 
