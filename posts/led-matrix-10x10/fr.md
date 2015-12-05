@@ -15,7 +15,8 @@ Non, ce que l'on cherche ici, c'est la satisfaction d'avoir réalisé son premie
 
 ![Le projet terminé](data/led_matrix.png)
 
-Je fournit ici le projet Eagle contenant schéma et PCB, pour que vous puissiez imprimer le PCB ou simplement modifier le design ; [led_matrix.7z](data/led_matrix.7z).
+
+Je vous fourni le projet Eagle contenant schéma et PCB, pour que vous puissiez imprimer le PCB ou simplement modifier le design ; [led_matrix.7z](data/led_matrix.7z).
 
 
 Dessin du circuit (PCB), détermination des composants
