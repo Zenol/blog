@@ -20,8 +20,8 @@ echo >> $HF
 # --------------------------------------------
 # - Posts
 function pan {
-    echo "pandoc -s $1 -A footer.html -c normalize.css -c bootstrap.css -o $2"
-    tail -n +4 $1 | pandoc -s -c ../../normalize.css -c ../../bootstrap.css -A $SITE"/footer.htm" -t html5 -o $SITE$2
+    # echo "pandoc -s --mathjax $1 -A footer.html -c normalize.css -c bootstrap.css -o $2"
+    tail -n +4 $1 | pandoc -s --mathjax -c ../../normalize.css -c ../../bootstrap.css -A $SITE"/footer.htm" -t html5 -o $SITE$2
     # Post processing
     if [ -f $SITE$2 ]; then
 	TITLE=$(head -n 1 $1 | cut -d ' ' -f 2-)
