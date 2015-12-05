@@ -67,8 +67,9 @@ for i in $( ls -t); do
 	    echo "	en.md"
     	    pan "en.md" "posts/"$i"/en.html" "EN"
 	fi
+	DIR=$BLOG"posts/"$i"/"
+    	cp *.md $DIR
 	if [ -d "data" ]; then
-	    DIR=$BLOG"posts/"$i"/"
 	    mkdir -p $DIR"data/"
 	    cp -r "data" $DIR
 	    echo "cp -r \"data\" $DIR"
