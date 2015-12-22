@@ -1324,6 +1324,7 @@ Quelques références :
 =====================
 
 Plus sur le PWM :
+
 - <http://arduino.cc/en/Tutorial/SecretsOfArduinoPWM>
 - [L'article sur le PWM :)](http://zenol.fr/site/2012/05/03/atmega328-arduino-uno-timercounter-pwm-a-625khz/ "ATMega328 (Arduino uno) : Timer/Counter & PWM à 62,5kHz")
 Plus sur Tone :
