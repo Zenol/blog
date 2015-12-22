@@ -140,3 +140,116 @@ Writing JSON
 ============
 
 Let's say that now, we wan't to produce this tree from our application's data. To do that, all we have to do is build a `ptree` containing our data.
+
+We start with an empty tree :
+```{.cpp}
+pt::ptree root;
+
+//...
+
+// Once our ptree was constructed, we can generate JSON on standard output
+pt::write_json(std::cout, root);
+```
+
+Add values
+----------
+
+Puting values in a tree can be acomplished with the `put()` method.
+
+```{.cpp}
+root.put("height", height);
+root.put("some.complex.path", "bonjour");
+```
+
+As you can see, very boring.
+
+Add a list of objects
+---------------------
+
+No big deel here, although we now use `add_child()` to put our `animal` node at the root.
+
+```{.cpp}
+// Create a node
+pt::ptree animals_node;
+// Add animals as childs
+for (auto &animal : animals)
+    animals_node.put(animal.first, animal.second);
+// Add the new node to the root
+root.add_child("animals", animals_node);
+```
+
+Add many nodes with the same name
+---------------------------------
+
+Now start the tricky tricks. If you want to add more than one time a node
+named `fish`, you can't call the `put()` method. The call `node.put("name", value)` will
+replace the existing node named `name`. But you can do it by manually pushing your nodes,
+as demonstrated bellow.
+
+```{.cpp}
+ // Add two objects with the same name
+ pt::ptree fish1;
+ fish1.put_value("blue");
+ pt::ptree fish2;
+ fish2.put_value("yellow");
+ oroot.push_back(std::make_pair("fish", fish1));
+ oroot.push_back(std::make_pair("fish", fish2));
+```
+
+Add a list of values
+-------------------
+
+If you remember, list are mades of nodes with empty name. Se we have to build node with empty names, and then use the `push_back()` once again to add all those unnamed childs.
+
+```{.cpp}
+// Add a list
+pt::ptree fruits_node;
+for (auto &fruit : fruits)
+{
+    // Create an unnamed node containing the value
+    pt::ptree fruit_node;
+    fruit_node.put("", fruit);
+
+    // Add this node to the list.
+    fruits_node.push_back(std::make_pair("", fruit_node));
+}
+root.add_child("fruits", fruits_node);
+```
+
+Add a matrix
+------------
+
+We already have all the tools needed to export our matrix. But let's demonstrate how to do it.
+
+```{.cpp}
+// Add a matrix
+pt::ptree matrix_node;
+for (int i = 0; i < 3; i++)
+{
+    pt::ptree row;
+    for (int j = 0; j < 3; j++)
+    {
+        // Create an unnamed value
+        pt::ptree cell;
+        cell.put_value(matrix[i][j]);
+        // Add the value to our row
+        row.push_back(std::make_pair("", cell));
+    }
+    // Add the row to our matrix
+    matrix_node.push_back(std::make_pair("", row));
+}
+// Add the node to the root
+root.add_child("matrix", matrix_node);
+```
+
+References
+==========
+
+You can download a [C++ example](./data/example.cpp) and the [input JSON file](./data/example.json) for experimenting. Compile it with `clang++ -std=c++11 example.cpp -o example`.
+
+Some links related :
+
+- [The official documentation](http://www.boost.org/doc/libs/1_60_0/doc/html/property_tree/tutorial.html)
+- [A post on stack overflow](http://stackoverflow.com/questions/2114466/creating-json-arrays-in-boost-using-property-trees)
+
+__Rem__ : At the moment, the boost::property_tree library doesn't output typed value. But we can expect that it will be corrected soon.
