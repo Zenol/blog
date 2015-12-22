@@ -12,11 +12,7 @@ OUTHF=$BLOG"/index.html"
 # - HF
 touch $HF
 echo "# Documents disponibles \/ Documents available" > $HF
-echo "## List of pages / Liste des pages" > $HF
-echo >> $HF
-echo "  * [Liste des developpements d'agregation](/site/blog/pages/agreg_dev.htmt)" >> $HF
-echo >> $HF
-echo "## List of posts / Liste des billets" >> $HF
+echo "## Liste des billets / List of posts" >> $HF
 echo >> $HF
 
 # --------------------------------------------
@@ -81,8 +77,17 @@ cd ..
 
 # --------------------------------------------
 # - HF
+echo >> $HF
+echo "## Liste des pages / List of pages" >> $HF
+echo >> $HF
+echo "  * [Liste des developpements d'agregation](/site/blog/pages/agreg_dev.html)" >> $HF
+echo >> $HF
+
+cat pages/agreg_dev.md | pandoc -s --mathjax -c $SITE/bootstrap/bootstrap.min.css -c $SITE/style.css -A $SITE/footer.html -B $SITE/header.html -t html5 -o $BLOG/pages/agreg_dev.html
 
 pandoc -s $HF -c $SITE/style.css -c $SITE/bootstrap/bootstrap.min.css -A $SITE/footer.html -B $SITE/header.html -t html5 -o $OUTHF
-#Change the dongle to Teaching
+rm $HF
+
+#Change the dongle to Blog
 sed -i "s!<li class=\"active\"><a href=\"/\">Home</a></li>!<li><a href=\"/\">Home</a></li>!g" $OUTHF
 sed -i "s!<li><a href=\"/site/blog/\">Blog</a></li>!<li class=\"active\"><a href=\"/site/blog/\">Blog</a></li>!g" $OUTHF
