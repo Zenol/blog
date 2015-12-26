@@ -1,3 +1,6 @@
 [submodule "resume"]
 	path = resume
 	url = https://github.com/Zenol/resume
+[submodule "teaching/android_lesson"]
+	path = teaching/android_lesson
+	url = https://github.com/Zenol/android_lesson
