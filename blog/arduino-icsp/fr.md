@@ -1,6 +1,9 @@
-﻿Title: Arduino as ICSP - Programmeur pour microcontrôleurs atmel
-Author: Jérémy Cochoy
-Date: 2012/05/25
+---
+title: Arduino as ICSP - Programmeur pour microcontrôleurs atmel
+author:
+- Jérémy Cochoy
+date: 2012/05/25
+...
 
 ICSP?
 =====

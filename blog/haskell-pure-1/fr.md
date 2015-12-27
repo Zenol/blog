@@ -1,6 +1,9 @@
-﻿Title: Le Haskell, un langage au label pure. Première partie.
-Author: Jérémy Cochoy
-Date: 2013/04/07
+---
+title: Le Haskell, un langage au label pure. Première partie.
+author:
+- Jérémy Cochoy
+date: 2013/04/07
+...
 
 Mauvais jeux de mots mit à part, ce très court et succin billet (vous me voyez venir) va traiter du haskell. Haskell, de monsieur Haskell Brook Curry, un monsieur très épicé, est un langage fonctionnel. Comme beaucoup de langages fonctionnel, cela représente un choque culturel que de les appréhender. Mais le haskell semble avoir un petit quelque chose que n'ont pas les autres langages fonctionnels. À travers les trois prochains billets, j'espère vous convaincre que, si un jour, dans votre vie, vous avez l'occasion de creuser un language fonctionnel, alors vous devriez creuser le haskell.
 

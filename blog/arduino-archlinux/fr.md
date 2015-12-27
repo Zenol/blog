@@ -1,6 +1,9 @@
-﻿Title: Arduino Uno sous ArchLinux (3.8.4-1-ARCH)
-Author: Jérémy Cochoy
-Date: 2013/03/31
+---
+title: Arduino Uno sous ArchLinux (3.8.4-1-ARCH)
+author:
+- Jérémy Cochoy
+date: 2013/03/31
+...
 
 Voilà que je ressort mon arduino de mes cartons, motivé à dépoussiérer le code de ma 'boite musicale'. Et quel ne fut pas ma surprise quand le package rxtx refusa de s'installer suite a des erreurs de compilation.
 
@@ -79,5 +82,6 @@ Bref, en fin de compte, si vous ne parvenez pas à utiliser votre arduino et que
 
 Références :
 ============
+
  *  <http://arduino.cc/en/Guide/troubleshooting#toc1> Drivers / Linux.
  *  <https://wiki.archlinux.org/index.php/Arduino>

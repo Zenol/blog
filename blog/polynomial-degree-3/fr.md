@@ -1,6 +1,9 @@
-﻿Title: De la résolution d'équations polynomial de degré 3
-Author: Jérémy Cochoy
-Date: 2011/02/25
+---
+title: De la résolution d'équations polynomial de degré 3
+author:
+- Jérémy Cochoy
+date: 2011/02/25
+...
 
 La recherche de racine pour des polynômes du 3ème degré
 =======================================================

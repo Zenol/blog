@@ -1,6 +1,9 @@
-﻿Title: Calculer $a^n$ en temps $log_2(n)$
-Author: Jérémy Cochoy
-Date: 2009/10/19
+---
+title: Calculer $a^n$ en temps $log_2(n)$
+author:
+- Jérémy Cochoy
+date: 2009/10/19
+...
 
 Introduction
 ============

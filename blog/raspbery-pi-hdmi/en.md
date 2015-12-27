@@ -1,6 +1,9 @@
-﻿Title: Raspbery PI with HDMI
-Author: Jérémy Cochoy
-Date: 2012/08/12
+---
+title: Raspbery PI with HDMI
+author:
+- Jérémy Cochoy
+date: 2012/08/12
+...
 
 Hi,
 

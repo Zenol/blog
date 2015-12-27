@@ -1,6 +1,9 @@
-﻿Title: C++ - A taste of functionnal programming
-Author: Jérémy Cochoy
-Date: 2013/07/12
+---
+title: C++ - A taste of functionnal programming
+author:
+- Jérémy Cochoy
+date: 2013/07/12
+...
 
 Dans ce billet, nous allons aborder quelques unes des nouvelles fonctionnalités offerte par le C++11. Elles sont clairement inspiré de la vie dans le monde fonctionnel.
 
@@ -169,5 +172,6 @@ Voilà, j'espère vous avoir donné un petit aperçu de l'apport du c++11 en mat
 
 Références :
 ============
- * <http://en.cppreference.com/w/cpp/language/lambda>
- * <http://en.cppreference.com/w/cpp/utility/functional/function>
+
+* <http://en.cppreference.com/w/cpp/language/lambda>
+* <http://en.cppreference.com/w/cpp/utility/functional/function>

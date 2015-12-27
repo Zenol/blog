@@ -1,6 +1,9 @@
-﻿Title: ATMega328 (Arduino uno) TimerCounter et PWM à 62,5kHz
-Author: Jérémy Cochoy
-Date: 2012/04/30
+---
+title: ATMega328 (Arduino uno) TimerCounter et PWM à 62,5kHz
+author:
+- Jérémy Cochoy
+date: 2012/04/30
+...
 
 Timer/Counter et PWM pour des fréquences élevés.
 ===================================================

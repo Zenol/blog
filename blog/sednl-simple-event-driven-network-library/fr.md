@@ -1,6 +1,9 @@
-Title:  SedNL : Simple Event Driven Network Library
-Author: Jérémy Cochoy
-Date:   2013/08/21
+---
+Title: 'SedNL : Simple Event Driven Network Library'
+Author:
+- Jérémy Cochoy
+Date: 2013/08/21
+...
 
 [SedNL](https://github.com/Zenol/sednl "SedNL repository") est une bibliothèque
 réseau écrite en C++11, principalement destinée à la réalisation d’applications
@@ -72,7 +75,7 @@ du système dans la gestion des threads, ...) la bibliothèque doit faire tout
 ce qui est possible pour conserver un comportement normal.
 Toutes les exceptions "std::bad_alloc" sont interceptées et traitées
 intelligemment afin de prévenir un malencontreux crash.
-En cas de file d'évènements plaine ou d'un manque de mémoire,
+En cas de file d'évènements pleine ou d'un manque de mémoire,
 les évènements sont temporairement ignorés.
 Cela vous permet de ne pas perdre les données de vos utilisateurs encore
 en mémoire, et de construire des applications serveur fiables à uptime élevé.

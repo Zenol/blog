@@ -1,6 +1,9 @@
-﻿Title: Construire sa matrice de led 10x10 pour l'utiliser avec une carte Arduino.
-Author: Jérémy Cochoy
-Date: 2012/06/06
+---
+title: Construire sa matrice de led 10x10 pour l'utiliser avec une carte Arduino.
+author:
+- Jérémy Cochoy
+date: 2012/06/06
+...
 
 Matrice de LED 10x10 pour une alimentation 5V
 =============================================

@@ -1,6 +1,9 @@
-﻿Title: Le Haskell, un langage au label pure. Seconde partie.
-Author: Jérémy Cochoy
-Date: 2013/04/22
+---
+title: Le Haskell, un langage au label pure. Seconde partie.
+author:
+- Jérémy Cochoy
+date: 2013/04/22
+...
 
 Nous continuons de découvrir des paysages fonctionnels à travers le Haskell. Cette fois, nous nous éloignons des généralités et rentrons dans le vif du sujet en nous intéressant à des aspects plus propre au haskell (bien que d'autres langages fonctionnels implémentent des fonctionnalités similaires).
 

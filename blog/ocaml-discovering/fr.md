@@ -1,6 +1,9 @@
-﻿Title: Découverte de $_{O}CAML$
-Author: Jérémy
-Date: 2009/11/21
+---
+title: Découverte de $_{O}CAML$
+author:
+- Jérémy
+date: 2009/11/21
+...
 
 Découverte d'OCAML
 ==================

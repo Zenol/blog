@@ -1,6 +1,9 @@
-﻿Title: Le Haskell, un langage au label pure. Troisième partie.
-Author: Jérémy Cochoy
-Date: 2013/05/01
+---
+title: Le Haskell, un langage au label pure. Troisième partie.
+author:
+- Jérémy Cochoy
+date: 2013/05/01
+...
 
 Et voici la troisième et dernière partie de notre découverte de ce joli langage. Au programme : des super foncteurs. D'abord des foncteurs applicatifs, puis des monades! Si vous rêviez de savoir pourquoi tant de gens s’enflamment devant ce langage, il est peut-être venue l'heure de la révélation.
 

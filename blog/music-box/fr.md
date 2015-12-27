@@ -1,6 +1,9 @@
-﻿Title:  Boite à musique
-Author: Jérémy Cochoy
-Date:   2013/08/16
+---
+title: 'Boite à musique'
+author:
+- Jérémy Cochoy
+date: 2013/08/16
+...
 
 Dans la lignée du dépoussiérage de vieux codes, j'ai ressorti un jeu de quelques fonctions pour arduino que je n'ai pas eu le temps de publier. Il s'agit d'une certaine façon d'une bibliothèque similaire à la lib "Tone" fournie avec l'Arduino. Toutefois, contrairement à cette dernière, c'est bien un instrument polyphonique dont vous disposez. À dire vrai, il y a 4 canaux d'onde carré, et un canal de bruit. On peut de plus régler l'amplitude sonore de chacun des canaux entre 0 (minimum) et 255 (maximum). Il y a tout de même une contrainte ; la somme des amplitudes ne doit pas excéder 255. Ainsi, jouer de la musique est relativement simple. Il suffit de choisir la fréquence et l'amplitude de chaque canal, puis d'attendre un certain laps de temps (fonction delay fournis avec les libs de l'arduino) avant de recommencer. Le bruit est généré grâce à une table de valeurs aléatoires près-calculés, pour des raisons de performances. Vous pouvez réduire ou augmenter la taille de cette table à votre guise, un "script C++"(trop peu de lignes pour parler de programme) permettant de générer le header.
 

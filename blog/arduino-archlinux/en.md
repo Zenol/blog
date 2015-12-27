@@ -1,6 +1,9 @@
-﻿Title: Arduino Uno with ArchLinux (3.8.4-1-ARCH)
-Author: Jérémy Cochoy
-Date: 2013/03/31
+---
+title: Arduino Uno with ArchLinux (3.8.4-1-ARCH)
+author:
+- Jérémy Cochoy
+date: 2013/03/31
+...
 
 I quickly explain how to make your arduino card works with your ArchLinux distrib by patching and installing the last version of rxtx.
 

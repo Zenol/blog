@@ -1,6 +1,9 @@
-﻿Title: Haskell - Lazy IO
-Author: Jérémy Cochoy
-Date: 2013/07/16
+---
+title: Haskell - Lazy IO
+author:
+- Jérémy Cochoy
+date: 2013/07/16
+...
 
 Ces derniers jours, j'écrivais un script haskell qui repère les fichiers présent en double, et propose de ne conserver qu'un exemplaire. Très pratique pour faire un peu de rangement, par exemple parmi une centaine de PDF que je ne lirais jamais.
 

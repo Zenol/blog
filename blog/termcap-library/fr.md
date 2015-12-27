@@ -1,6 +1,9 @@
-﻿Title: A termcap library, for handling particles animation in terminals.
-Author: Jérémy Cochoy
-Date: 2009/10/24
+---
+title: A termcap library, for handling particles animation in terminals.
+author:
+- Jérémy Cochoy
+date: 2009/10/24
+...
 
 Bonsoir,
 

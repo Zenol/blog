@@ -1,6 +1,9 @@
-﻿Title: Windows Keyboard Mapping
-Author: Jérémy Cochoy
-Date: 2009/09/08
+---
+title: 'Windows Keyboard Mapping'
+author:
+- Jérémy Cochoy
+date: 2009/09/08
+...
 
 Hello,
 

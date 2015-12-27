@@ -1,6 +1,9 @@
-Title:  An alternative error handling strategy for C++
-Author: Jérémy Cochoy
-Date:   2013/08/27
+---
+title:  An alternative error handling strategy for C++
+author:
+- Jérémy Cochoy
+date:   2013/08/27
+...
 
 Error handling
 ==============

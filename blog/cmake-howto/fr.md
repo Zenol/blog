@@ -1,6 +1,9 @@
-﻿Title: CMake - Mini howto
-Author: Jérémy Cochoy
-Date: 2013/06/30
+---
+title: CMake - Mini howto
+author:
+- Jérémy Cochoy
+date: 2013/06/30
+...
 
 Qu'est-ce que CMake ?
 =====================
