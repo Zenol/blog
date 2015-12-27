@@ -4,3 +4,9 @@
 [submodule "teaching/android_lesson"]
 	path = teaching/android_lesson
 	url = https://github.com/Zenol/android_lesson
+[submodule "pdfs/periodic-function-curvature"]
+	path = pdfs/periodic-function-curvature
+	url = https://github.com/Zenol/wpfccpc.git
+[submodule "pdfs/perlin-noise"]
+	path = pdfs/perlin-noise
+	url = https://github.com/Zenol/perlin-noise.git
