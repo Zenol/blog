@@ -2,7 +2,7 @@
 title: Tutoriel d'initiation à SEDNL
 author:
 - Jérémy Cochoy
-date: 2013/08.25
+date: 2013/08/25
 ...
 
 Ce court tutoriel vas vous apprendre à utiliser la bibliothèque réseau SedNL.
