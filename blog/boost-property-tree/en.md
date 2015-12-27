@@ -2,7 +2,7 @@
 title: How to use boost::property_tree to load and write JSON
 author:
 - Jérémy Cochoy
-data: 2015/12/21
+date: 2015/12/21
 ...
 
 Boost's Property Tree

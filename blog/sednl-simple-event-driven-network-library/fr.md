@@ -1,8 +1,8 @@
 ---
-Title: 'SedNL : Simple Event Driven Network Library'
-Author:
+title: 'SedNL : Simple Event Driven Network Library'
+author:
 - Jérémy Cochoy
-Date: 2013/08/21
+date: 2013/08/21
 ...
 
 [SedNL](https://github.com/Zenol/sednl "SedNL repository") est une bibliothèque
