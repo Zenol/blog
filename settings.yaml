@@ -1,0 +1,4 @@
+---
+site_root : 'http://zenol.fr'
+styles : ['bootstrap/css/bootstrap.min.css']
+...
