@@ -26,7 +26,11 @@ Enseignements :
   * [TP3](./android_lesson/td3.pdf)
   * [Corrigé AP_Photo](https://github.com/Zenol/ap_photo/blob/master/app/src/main/java/com/example/geometrica2/ap_photo/Photo.java)
 
-TP/TD/COURS : Pour le prochain Cours / TP, vous devez terminer l'exercice, bosser vos projets, et relire le cours pour une petite intero. Ah, et bossez vos projets...
+#### Le controle continu
+  * [Sujet 2015](./android_lesson/cc-sujet-2015.pdf)
+  * [Correction du sujet 2015](./android_lesson/cc-correction-2015.pdf)
+
+TP/TD/COURS : Vos devez terminer vos projets. Le sujet et le corriger du CC sont en ligne.
 
 --------------------------------------------------
 
