@@ -1,4 +1,5 @@
 ---
 site_root : 'http://zenol.fr'
 styles : ['bootstrap/css/bootstrap.min.css']
+exclude_files : ['README.md', 'resume/index.md']
 ...
