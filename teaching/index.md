@@ -1,16 +1,6 @@
 Enseignement de Jérémy Cochoy
 =============================
 
-Doctorant à l'INRIA-Saclay. Mon sujet de recherche porte sur les __Modules de persistance__.
-
-Il est questions d'etudier le comportement en dimension 1 et plus des modules de persistances et des invariants que l'on peut leur associer (Par exemple, les diagrammes de persistance) ainsi que la stabilite de ces invariants.
-
-Un resultat de decomposition est disponible sur archive :
-
-* [Decomposition of exact pfd persistence bimodules](https://arxiv.org/abs/1605.09726)
-
---------------------------------------------------
-
 Enseignements :
 ---------------
 
