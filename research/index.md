@@ -23,7 +23,7 @@ Si on autorise une plus grande dimension $(\mathbf{R}^n, \leq)$ ou $(x_1, \dots,
 
 Si l'ordre alterne, par exemple $0 \leq 1 \geq 2 \leq 3 \geq \dots$, on parle de zigzag de persistance.
 
-On parle d'homologie persistante car ces foncteurs sont obtenus à partir du foncteur homologie. La construction la plus simple consiste à prendre un nuage de points $P$, puis les sous-niveaux de la fonction distance $X_k = d^-1(P, ]-\infty, k])$. On obtient alors un module sur $\mathbf{N}$ $ H(X_0) \rightarrow H(X_1) \rightarrow \dots$.
+On parle d'homologie persistante car ces foncteurs sont obtenus à partir du foncteur homologie. La construction la plus simple consiste à prendre un nuage de points $P$, puis les sous-niveaux de la fonction distance $X_k = d^{-1}(P, ]-\infty, k])$. On obtient alors un module sur $\mathbf{N}$ $ H(X_0) \rightarrow H(X_1) \rightarrow \dots$.
 
 Je m'intéresse à des résultats de décomposition et de stabilités des signatures construites à partir de tels objets.
 
