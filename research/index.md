@@ -6,6 +6,8 @@ Statut :
 
 Je suis actuellement doctorant à l'INRIA-Saclay. Mon sujet de recherche porte sur les __Modules de persistance__.
 
+![](chain_complexes.png)
+
 Domaine de recherche :
 ----------------------
 
