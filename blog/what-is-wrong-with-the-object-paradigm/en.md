@@ -175,5 +175,73 @@ A* q = &obj_c;
 
 ```
 
+Introducing this featre in the language ensure automatic conversion from B* to A* with the right pointer arithmetic.
+It remove the risk of often hard to spot bugs.
+Inheriting doesn't apply only to type, it apply to methodes. You can call mathode working with a type A on instance of type B. This is the key reason of this pointer conversion.
+
+The languages C++ and Java alow something even stronguer than reusing methode for subtypes in inheritence hierarchy. Through abstract methods, or Java's interface, you can force the existence of methods on a given type. Such that the behavior can be different with different types,
+but the interface to work on them remind the same. Allowing huge code factorisation and genericity of algorithms.
+
+So why is OOP wrong?
+--------------------
+
+Before saying anything, I want to show you how does object looks like in different mainstream languages.
+
+![Montage arduino](data/object-languages.png)
+
+Of course, you can make schemes similar to java in C++ ; interface are obtained through abstract class.
+It's just that the language doesn't prevent you from gluing too much things together (but that's actually part of the C++ philosophy : allow to do as much thing as you can imagine, but you have to make carefully your design decisions).
+
+Looking at the scheme, we see that always, in both languages, type definition and methode definitions are glued togever.
+You __can not__ define a type and later, in a completely independent way, implement methodes for this type.
+Actually, if C++ and Java are the only object languages you have heard about, my last sentence might sounds realy strange for you (even maybe sounds like non-sence).
+But notice that in D, you __can__ implement something relly similar to methodes in a complementaly independent way of type definition.
+Why would you do that? Let me give you a tasty example.
+
+A guy (let call him A) make a colorfull library describing tasty chocolate biscuits.
+Here is a little bit of his library.
+```
+Biscuit -> Cookie -> FullChocolateCookie
+                  -> WhiteAndBlackCookie
+        -> Oreo
+```
+He thing a lots about cooking such wonderfull wonders, an implement many sophisticated methods.
+
+Now an other guy (named B) just discovered the best way to eat biscuits,
+so that you can really enjoy all the taste and perfum they carry.
+Not only for chocolate biscuits, but for any biscuit in the world.
+He implement many new biscuit, and their _eat_ method.
+But in those languages, his only way to add a _eat_ method to A's cookies is to either:
+  * Re-implement all the biscuit A did in his library, or modify A's library to add his eat method,
+  * Encapsulate the A library in some container, like a 'biscuit metal box', which is definitively not as easy to eat (especialy because metal tends to be harder your teeth).
+
+If you developpe library and re-use existing libraries, that's a problem you probably already encountered many times.
+
+This is because there is actualy no good reason to enforce (Java style) interface implementation where type definition occures.
+This is the first big issue comming from the way object model is implemented __and__ conceived in developper's mind.
+
+The second big issue, related to the way OOP is done today, is the huge verbosity and boilerplate code introduced by encapsulation. Good books like 'effective C++'[^effective-cpp] even recommand doing so.
+You see it everiday, from getter and setter mostly doing one-line affectation (many ide have tools for automating this code generation) to constructor only forwarding argument to member variables. I really like the following example from LLVM's documentation:
+``` {.cpp}
+AST Bidule {
+    ASTBidule(t1 a, t2 b, t3 c)
+    :a(a), b(b), c(c) {};
+
+    t1 a;
+    t2 b;
+    t3 c;
+};
+```
+
+So much redundancy. Have a look at LLVM's example for heavily verbose C++ code (that is actually good C++ practice...).
+Each variable's name is writen three times.
+I would say that this code is three times longuer that it should be (I mean, if we was living in a perfect world).
+But there isn't a better way to do it, comforming to usual understanding of OOP.
+If so, LLVM's developper would have found it and spreed the word.
+
+
+
+
 [^procedural-paradigm]: Procedural paradigm means essentially that the language provide functions with side effects, and code is written linearly.
     You can see it like an enhencement of languages that only provide goto and jumps.
+[^effective-cpp]: This is a really good book on good programming advices for C++ developper. Despite the critic made in this article, it's definitively a book full of good practices.
