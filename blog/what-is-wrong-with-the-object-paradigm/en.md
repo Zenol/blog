@@ -44,7 +44,7 @@ The hopes of OOP
 ----------------
 
 What came out from a lots of procedural developpement is that you often have types
-that describe some complexe structure (for example, lists in C are build of chained cells,
+that describe some complexe structure (for example, linked lists in C are build of chained cells,
 each cell composed of a value and a link to the next cell)
 and functions operating on this type (using the same example,
 function for initialising empty list, destroying list,
