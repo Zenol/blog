@@ -12,12 +12,12 @@ Disclaimer: Aside from the catchy title,
 the main point of this article is to asks questions about the weakness of OOP
 and how some languages provided some element of improvement.
 
-> The object paradigm is fundamentally wrong
+> The object paradigm is fundamentally wrong[^wrong]
 
 If you are curious about programming languages and divers paradigms,
 you probably heard or read this sentence more than once.
 Through those lines,
-I'll try to draw a picture of the main reason that can lead to this conclusion.
+I'll try to draw a picture of the main reason that can lead peoples to this conclusion.
 What are the good side and wrong side of OOP,
 and how we can improve this paradigm by tuning it a little bit.
 This nice "tunning" is actually already part of some languages,
@@ -419,3 +419,4 @@ just because your favorite language doesn't provide such features :)
     You can see it like an enhencement of languages that only provide goto and jumps.
 [^effective-cpp]: This is a really good book on good programming advices for C++ developper. Despite the critic made in this article, it's definitively a book full of good practices.
 [^trait]: See <http://rustbyexample.com/trait.html>
+[^wrong]: Things aren't black and white. The object paradigm is definitively well suited for many tasks like modelising GUI.
