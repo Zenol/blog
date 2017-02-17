@@ -9,7 +9,7 @@ Object paradigm VS categoric paradigm : what is wrong with the object paradigm.
 ================================================================================
 
 Disclaimer: Aside from the catchy title,
-the main point of this article asks questions about the weakness of OOP
+the main point of this article is to asks questions about the weakness of OOP
 and how some languages provided some element of improvement.
 
 > The object paradigm is fundamentally wrong
