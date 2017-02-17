@@ -9,16 +9,16 @@ Object paradigm VS categoric paradigm : what is wrong with the object paradigm.
 ================================================================================
 
 
-> The object paradigm is fondamentally wrong
+> The object paradigm is fundamentally wrong
 
 If you are curious about programming languages and divers paradigms,
-you probablyu eard or read this sentence more than once.
-THrough those lines,
+you probably heard or read this sentence more than once.
+Through those lines,
 I'll try to draw a picture of the main reason that can lead to this conclusion.
 What are the good side and wrong side of OOP,
 and how we can improve this paradigm by tuning it a little bit.
 This nice "tunning" is actually already part of some languages,
-and i'll refer to it as the 'category paradigm'.
+and I'll refer to it as the 'category paradigm'.
 
 Where does the object paradigm comes from?
 ------------------------------------------
@@ -26,24 +26,24 @@ Where does the object paradigm comes from?
 First, let's recall how, historically, we came to the object paradigm.
 We are in the late 70s.
 The C language is now famous as it completely changed the way to write code
-compared to assembly, is human readable and have a monstruous expressivity
+compared to assembly, is human readable and have a monstrous expressivity
 in only few language words and
-the procedural paradigm[^procedural-paradigm] (the one you use while writting C)
+the procedural paradigm[^procedural-paradigm] (the one you use while writing C)
 is well understood.
-But, as applications grow and get an increassing size,
-developpers are facing an increassingly common problem:
-the code 's complexity is growing exponentially, and code gets harder and harder to write
+But, as applications grow and get an increasing size,
+developers are facing an increasingly common problem:
+the code's complexity is growing exponentially, and code gets harder and harder to write
 (it still sounds like a today's problem, right? :-) ).
-The object paradigm was developped, expecting to solve the complexity curse.
+The object paradigm was developed, expecting to solve the complexity curse.
 Here came OBJC and C++, both in 1983.
 
-Saddly, we know today that OOP wasn't the Holly graal.
-But what did made peaples bealive that it would be, and why is OOP still used today?
+Sadly, we know today that OOP wasn't the Holly Graal.
+But what did made peoples believe that it would be, and why is OOP still used today?
 
 The hopes of OOP
 ----------------
 
-What came out from a lots of procedural developpement is that you often have types
+What came out from a lots of procedural development is that you often have types
 that describe some complexe structure (for example, linked lists in C are build of chained cells,
 each cell composed of a value and a link to the next cell)
 and functions operating on this type (using the same example,
@@ -51,10 +51,10 @@ function for initialising empty list, destroying list,
 inserting into this list and removing value from it, etc.).
 Once you have spoted this coding pattern, it sounds raisonable to formalise it so that
 you don't always have to rewrite it by hand, each time.
-Indeed, this is the best way to involve : spot a pattern that peaple do mechanicaly,
+Indeed, this is the best way to involve : spot a pattern that people do mechanicaly,
 and automatise it.
 It worked for the automobile industry,
-and it also did for computer developpement.
+and it also did for computer development.
 Automatisation, from shell script... to new programming languages.
 
 Genese of OOP
@@ -259,13 +259,13 @@ But in those languages, his only way to add a _eat_ method to A's cookies is to 
   * Re-implement all the biscuit A did in his library, or modify A's library to add his eat method,
   * Encapsulate the A library in some container, like a 'biscuit metal box', which is definitively not as easy to eat (especialy because metal tends to be harder your teeth).
 
-If you developpe library and re-use existing libraries,
+If you develope library and re-use existing libraries,
 that's a problem you probably already encountered many times.
 
 This is because there is actualy no good reason to enforce (Java style)
 interface implementation where type definition occures.
 This is the first big issue comming from the way object model
-is implemented __and__ conceived in developper's mind.
+is implemented __and__ conceived in developer's mind.
 
 The second big issue, related to the way OOP is done today,
 is the huge verbosity and boilerplate code introduced by encapsulation.
@@ -394,7 +394,7 @@ Conclusion
 
 Though this article have a really catchy title,
 the main point is to show you an other perspective for the concept of object
-that is quite different from the one OOP's developper are used to.
+that is quite different from the one OOP's developer are used to.
 The first goal is to show the weakness of the object paradigm,
 and the second is to demonstrate how some of them can be strengthen
 from a small switch in the viewpoint, using emerging languages for examples.
@@ -404,7 +404,7 @@ The Mozilla fundation made a wonderfull work by creating rust, a language that p
 both the functionnal and procedural paradigms, and also allow to take the
 object approache in cases where it fits better than the two previous paradigms.
 I hope that it made you question yourself on the object oriented paradigm and
-developped your curiosity for other languages.
+developed your curiosity for other languages.
 The other languages mentionner are not mainstraim, but the ideas they carry
 appear increasingly in many languages and if we cannot say which language will be
 the language of tomorow, we can be sure that this language will provide many
