@@ -43,19 +43,19 @@ But what did made peoples believe that it would be, and why is OOP still used to
 The hopes of OOP
 ----------------
 
-What came out from a lots of procedural development is that you often have types
-that describe some complexe structure (for example, linked lists in C are build of chained cells,
+What came out from a lot of procedural development is that you often have types
+that describe some complex structure (for example, linked lists in C are built of chained cells,
 each cell composed of a value and a link to the next cell)
 and functions operating on this type (using the same example,
 function for initialising empty list, destroying list,
 inserting into this list and removing value from it, etc.).
-Once you have spoted this coding pattern, it sounds raisonable to formalise it so that
+Once you have spoted this coding pattern, it sounds reasonable to formalise it so that
 you don't always have to rewrite it by hand, each time.
-Indeed, this is the best way to involve : spot a pattern that people do mechanicaly,
+Indeed, this is the best way to involve : spot a pattern that people do mechanically,
 and automatise it.
-It worked for the automobile industry,
+It worked in the automobile industry,
 and it also did for computer development.
-Automatisation, from shell script... to new programming languages.
+Automatization, from shell script... to new programming languages.
 
 Genese of OOP
 -------------
