@@ -262,18 +262,18 @@ But in those languages, his only way to add an _eat_ method to A's cookies is to
   * Re-implement all the biscuit A did in his library, or modify A's library to add his eat method,
   * Encapsulate the A library in some container, like a 'biscuit metal box', which is definitively not as easy to eat (especially because metal tends to be harder your teeth).
 
-If you develope library and re-use existing libraries,
+If you develop library and re-use existing libraries,
 that's a problem you probably already encountered many times.
 
-This is because there is actualy no good reason to enforce (Java style)
-interface implementation where type definition occures.
-This is the first big issue comming from the way object model
+This is because there is actually no good reason to enforce (Java style)
+interface implementation where type definition occurs.
+This is the first big issue coming from the way object model
 is implemented __and__ conceived in developer's mind.
 
 The second big issue, related to the way OOP is done today,
 is the huge verbosity and boilerplate code introduced by encapsulation.
-Good books like 'effective C++'[^effective-cpp] even recommand doing so.
-You see it everiday, from getter and setter mostly doing one-line affectation
+Good books like 'effective C++'[^effective-cpp] even recommend doing so.
+You see it everyday, from getters and setters mostly doing one-line affectation
 (many ide have tools for automating this code generation) to constructor
 only forwarding argument to member variables.
 I really like the following example from LLVM's documentation:
@@ -291,29 +291,29 @@ AST Bidule {
 So much redundancy.
 Have a look at LLVM's example for heavily verbose C++ code
 (that is actually good C++ practice...).
-Each variable's name is writen three times.
-I would say that this code is three times longuer that it should be
+Each variable's name is written three times.
+I would say that this code is three times longer that it should be
 (I mean, if we was living in a perfect world).
-But there isn't a better way to do it, comforming to usual understanding of OOP.
-If so, LLVM's developper would have found it and spreed the word.
+But there isn't a better way to do it, conforming to usual understanding of OOP.
+If so, LLVM's developer would have found it and spreed the word.
 
 The categoric paradigm
 ----------------------
 
-What I call categoric pradigm is a way of doing OOP in some functional languages
+What I call categoric paradigm is a way of doing OOP in some functional languages
 like Haskell, but also Rust.
 Up to a certain amount it can also be done in D.
 
-The main idea is that types remain types (agregated data),
+The main idea is that types remain types (aggregated data),
 functions and procedure remain procedures.
 Sets of procedures can be regrouped together in a typeclass definition.
-A typeclass (it's a matematicall class) definition is similar to a java interface.
-Types that become instances of this typeclass should implement this methods, but
+A typeclass (it's a mathematical class) definition is similar to a java interface.
+Types that become instances of this typeclass should implement its methods, but
 the main difference is that the belonging of a type T to a given typeclass C can be
 stated independently of the typeclass definition and of the type definition.
 In rust, typeclass are named trait.
 Types are types (as they are in C) and the link between them, the instanciation of
-the trait of a type can be done independetely of the definition of the trait and of
+the trait of a type can be done independently of the definition of the trait and of
 the definition of the type.
 
 Here is bellow a short example from rust's documentation[^trait]:
@@ -384,11 +384,10 @@ impl Animal for Sheep {
 See how this three things can be done independently.
 
 Similar things can be archived in haskell,
-though constructor and destructor doesn't exists.
+though constructor and destructor doesn't exist.
 But Haskell's variable are by default immutable,
-and the language is full of lazyness.
-In a such context, looking for a constructor or a destructor doesn't make
-that much sens.
+and the language is full of laziness.
+In a such context, looking for a constructor or a destructor doesn't make sens.
 But for the curious, what is done in rust for methods can be done in the
 same way in Haskell.
 
@@ -396,27 +395,27 @@ Conclusion
 ----------
 
 Though this article have a really catchy title,
-the main point is to show you an other perspective for the concept of object
+the main point is to show you another perspective for the concept of object
 that is quite different from the one OOP's developer are used to.
 The first goal is to show the weakness of the object paradigm,
 and the second is to demonstrate how some of them can be strengthen
 from a small switch in the viewpoint, using emerging languages for examples.
-The vew point demonstrated here is more known in the fonctional programming land
-(although not all functionnal programming languages offerd such functionnalities).
-The Mozilla fundation made a wonderfull work by creating rust, a language that provide
-both the functionnal and procedural paradigms, and also allow to take the
-object approache in cases where it fits better than the two previous paradigms.
+The view point demonstrated here is more known in the functional programming land
+(although not all functional programming languages offers such features).
+The Mozilla fondation made a wonderful work by creating rust, a language that provide
+both the functional and procedural paradigms, and also allow taking the
+object approach in cases where it fits better than the two previous paradigms.
 I hope that it made you question yourself on the object oriented paradigm and
 developed your curiosity for other languages.
-The other languages mentionner are not mainstraim, but the ideas they carry
+The other languages mentioned are not mainstream, but the ideas they carry
 appear increasingly in many languages and if we cannot say which language will be
-the language of tomorow, we can be sure that this language will provide many
-tools that are common in the functionnal world, probably together with
+the language of tomorrow, we can be sure that this language will provide many
+tools that are common in the functional world, probably together with
 our usual tools from procedural languages. So don't turn your head away,
 just because your favorite language doesn't provide such features :)
 
 [^procedural-paradigm]: Procedural paradigm means essentially that the language provide functions with side effects, and code is written linearly.
     You can see it like an enhencement of languages that only provide goto and jumps.
-[^effective-cpp]: This is a really good book on good programming advices for C++ developper. Despite the critic made in this article, it's definitively a book full of good practices.
+[^effective-cpp]: This is a really good book on good programming advices for C++ developer. Despite the critic made in this article, it's definitively a book full of good practices.
 [^trait]: See <http://rustbyexample.com/trait.html>
-[^wrong]: Things aren't black and white. The object paradigm is definitively well suited for many tasks like modelising GUI.
+[^wrong]: Things aren't black and white. The object paradigm is definitively well suited for many tasks like modeling GUI.
