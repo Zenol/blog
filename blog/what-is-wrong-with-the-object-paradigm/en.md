@@ -231,36 +231,36 @@ I want to show you how does object looks like in different mainstream languages.
 
 Of course, you can make schemes similar to java in C++ ;
 interface are obtained through abstract class.
-It's just that the language doesn't prevent you from gluing too much things together
-(but that's actually part of the C++ philosophy : allow to do
+It's just that the language doesn't prevent you from gluing too many things together
+(but that's actually part of the C++ philosophy : allow doing
 as much thing as you can imagine, but you have to make carefully your design decisions).
 
 Looking at the scheme, we see that always, in both languages,
-type definition and methode definitions are glued togever.
-You __can not__ define a type and later, in a completely independent way,
-implement methodes for this type.
+type definition and method definitions are glued together.
+You __can not__ define a type and later,
+in a completely independent way, implement methods for this type.
 Actually, if C++ and Java are the only object languages you have heard about,
-my last sentence might sounds realy strange for you (even maybe sounds like non-sence).
-But notice that in D, you __can__ implement something relly similar to methodes in a
-complementaly independent way of type definition.
+my last sentence might sounds really strange for you (even maybe sounds like nonsense).
+But notice that in D, you __can__ implement something rely similar to methods in a
+complementary independent way of type definition.
 Why would you do that? Let me give you a tasty example.
 
-A guy (let call him A) make a colorfull library describing tasty chocolate biscuits.
+A guy (let call him A) make a colorful library describing tasty chocolate biscuits.
 Here is a little bit of his library.
 ```
 Biscuit -> Cookie -> FullChocolateCookie
                   -> WhiteAndBlackCookie
         -> Oreo
 ```
-He thing a lots about cooking such wonderfull wonders, an implement many sophisticated methods.
+He think a lot about cooking such wonderful wonders, an implement many sophisticated methods.
 
-Now an other guy (named B) just discovered the best way to eat biscuits,
-so that you can really enjoy all the taste and perfum they carry.
+Now another guy (named B) just discovered the best way to eat biscuits,
+so that you can really enjoy all the taste and perfume they carry.
 Not only for chocolate biscuits, but for any biscuit in the world.
-He implement many new biscuit, and their _eat_ method.
-But in those languages, his only way to add a _eat_ method to A's cookies is to either:
+He implements many new biscuit, and their _eat_ method.
+But in those languages, his only way to add an _eat_ method to A's cookies is to either:
   * Re-implement all the biscuit A did in his library, or modify A's library to add his eat method,
-  * Encapsulate the A library in some container, like a 'biscuit metal box', which is definitively not as easy to eat (especialy because metal tends to be harder your teeth).
+  * Encapsulate the A library in some container, like a 'biscuit metal box', which is definitively not as easy to eat (especially because metal tends to be harder your teeth).
 
 If you develope library and re-use existing libraries,
 that's a problem you probably already encountered many times.
