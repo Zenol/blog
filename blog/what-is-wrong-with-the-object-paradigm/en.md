@@ -5,16 +5,16 @@ author:
 date: 2017/02/17
 ...
 
-Object paradigm VS categoric paradigm : what is wrong with the object paradigm.
+Object paradigm and categoric paradigm : what is wrong with the object paradigm.
 ================================================================================
 
 Disclaimer: Aside from the catchy title,
 the main point of this article is to asks questions about the weakness of OOP
-and how some languages provided some element of improvement.
+and how some languages provided some element of improvement, by taking a slightly different point of view.
 
 > The object paradigm is fundamentally wrong[^wrong]
 
-If you are curious about programming languages and divers paradigms,
+If you are curious about programming languages and diverse paradigms,
 you probably heard or read this sentence more than once.
 Through those lines,
 I'll try to draw a picture of the main reason that can lead peoples to this conclusion.
@@ -52,7 +52,7 @@ each cell composed of a value and a link to the next cell)
 and functions operating on this type (using the same example,
 function for initialising empty list, destroying list,
 inserting into this list and removing value from it, etc.).
-Once you have spoted this coding pattern, it sounds reasonable to formalise it so that
+Once you have spotted this coding pattern, it sounds reasonable to formalise it so that
 you don't always have to rewrite it by hand, each time.
 Indeed, this is the best way to involve : spot a pattern that people do mechanically,
 and automatise it.
@@ -60,15 +60,15 @@ It worked in the automobile industry,
 and it also did for computer development.
 Automatization, from shell script... to new programming languages.
 
-Genese of OOP
--------------
+Genesis of OOP
+--------------
 
 This was the genese of the object paradigm.
 We call a such data type an object, add an
 initialisation procedure always called at initialisation,
 and an other one always called when the resource become unreachable.
 Namely, OOP's constructor and destructors.
-Because we always have a lot's of metode related to this object that
+Because we always have lots of methods related to this object that
 always need as argument this object,
 we add them to the type definition and call them methods.
 
@@ -151,7 +151,7 @@ the support of the paradigm _in_ the language.
 Now you might interupt me and argue 'object paradim isn't just about methods glued to a type'.
 And you would be right.
 I swept under the rug _inheritence_.
-This feature actually comes from an other spotted codding patters C developers was also
+This feature actually comes from spotting another codding patter C developers were also
 doing quite frequently.
 You reproduce the inheritence by agregating types, and using pointer arithmetic,
 as shown below.
@@ -206,11 +206,11 @@ A* q = &obj_c;
 
 ```
 
-Introducing this featre in the language ensure automatic conversion from B* to A* with
+Introducing this feature in the language ensure automatic conversion from B* to A* with
 the right pointer arithmetic.
 It remove the risk of often hard to spot bugs.
-Inheriting doesn't apply only to type, it apply to methodes.
-You can call mathode working with a type A on instance of type B.
+Inheriting doesn't apply only to type, it apply to methods.
+You can call methods working with a type A on instance of type B.
 This is the key reason of this pointer conversion.
 
 The languages C++ and Java alow something even stronguer than reusing methode
