@@ -227,7 +227,7 @@ So why is OOP wrong?
 Before saying anything,
 I want to show you how does object looks like in different mainstream languages.
 
-![Montage arduino](data/object-languages.png)
+![Object Languages](data/object-languages.png)
 
 Of course, you can make schemes similar to java in C++ ;
 interface are obtained through abstract class.
