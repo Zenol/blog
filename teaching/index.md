@@ -28,7 +28,10 @@ Enseignements :
   * [Sujet 2015](./android_lesson/cc-sujet-2015.pdf)
   * [Correction du sujet 2015](./android_lesson/cc-correction-2015.pdf)
 
-TP/TD/COURS : Vos devez terminer vos projets. Le sujet et le corriger du CC sont en ligne.
+
+
+
+
 
 --------------------------------------------------
 
