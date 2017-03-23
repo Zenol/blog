@@ -13,16 +13,17 @@ A set of test-roms to check the cpu instructions behavior, timing,
 acess to memory, and sound implementation.
 
 Mirror available here:
-  * [data/blargg/readme.txt]
-  * <./data/blargg/cgb_sound.zip>
-  * <data/blargg/cpu_instrs.zip>
-  * <data/blargg/dmg_sound.zip>
-  * <data/blargg/halt_bug.zip>
-  * <data/blargg/instr_timing.zip>
-  * <data/blargg/interrupt_time.zip>
-  * <data/blargg/mem_timing.zip>
-  * <data/blargg/mem_timing-2.zip>
-  * <data/blargg/oam_bug.zip>
+
+  * [readme.txt](./data/blargg/readme.txt)
+  * [cgb_sound.zip](data/blargg/cgb_sound.zip)
+  * [cpu_instrs.zip](data/blargg/cpu_instrs.zip)
+  * [dmg_sound.zip](data/blargg/dmg_sound.zip)
+  * [halt_bug.zip](data/blargg/halt_bug.zip)
+  * [instr_timing.zip](data/blargg/instr_timing.zip)
+  * [interrupt_time.zip](data/blargg/interrupt_time.zip)
+  * [mem_timing.zip](data/blargg/mem_timing.zip)
+  * [mem_timing-2.zip](data/blargg/mem_timing-2.zip)
+  * [oam_bug.zip](data/blargg/oam_bug.zip)
 
 [How Do I Write an Emulator?](http://www.atarihq.com/danb/files/emu_vol1.txt)
 ---------------------------
