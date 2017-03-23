@@ -4,7 +4,7 @@ Enseignement de Jérémy Cochoy
 Enseignements :
 ---------------
 
-### 2015-2016 : Développement android
+### 2015-2017 : Développement android
 
 #### Les cours
   * [Le premier cours](./android_lesson/cours1.pdf)
@@ -12,6 +12,11 @@ Enseignements :
   * [Le troisième cours](./android_lesson/cours3.pdf)
   * [Le quatrième cours](./android_lesson/cours4.pdf)
   * [Le cinquième cours](./android_lesson/cours5.pdf)
+  * [Le sixième cours](./android_lesson/cours6.pdf)
+
+#### Cours videos (Youtube)
+  * [Le premier cours](https://youtu.be/MaWMXG1za9w)
+  * [Le second cours](https://youtu.be/acYLYqbJL9I)
 
 #### Les TP
   * [TP1](./android_lesson/td1.pdf)
