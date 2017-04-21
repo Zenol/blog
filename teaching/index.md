@@ -17,6 +17,10 @@ Enseignements :
 #### Cours videos (Youtube)
   * [Le premier cours](https://youtu.be/MaWMXG1za9w)
   * [Le second cours](https://youtu.be/acYLYqbJL9I)
+  * [Le troisième cours](https://youtu.be/3WkI73E35HEh)
+  * [Le quatrième cours](https://youtu.be/IjwAeOWEUFg)
+  * Le cinquième cours
+  * Le sixième cours
 
 #### Les TP
   * [TP1](./android_lesson/td1.pdf)
