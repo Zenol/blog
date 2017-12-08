@@ -31,8 +31,8 @@ $(\mathbb{R}^n, \leq)$ with $(x_1, \dots, x_n) \leq (y_1, \dots, y_n) \Leftright
 If the order alternate, for example consider the quiver given by 0 \leq 1 \geq 2 \leq 3 \geq \dots$, it is called wigwag persistence.
 
 We speack of persistent homology because this functor, with values in the category of vector spaces, is obtain by computing the homology of a filtered topological space.
-The simplest construction consist of taking a point cloud $P \subset \sR^m$,
-and then computing the sub-levelset of the (euclidean for example) distance function: $X_k = d^{-1}(P, ]-\infty, k])$. This collection of sets is called a filtration.
+The simplest construction consist of taking a point cloud $P \subset \mathbb{R}^m$,
+and then computing the sub-levelset of the (euclidean for example) distance function to the point cloud: $X_k = d^{-1}_P(]-\infty, k])$. This collection of sets is called a filtration.
 We obtain our persistence module by applying the homology functor $\mathbb{N}$ : $H(X_0) \rightarrow H(X_1) \rightarrow \dots$.
 
 I'm looking for decomposition theorems and stability results for the signature made from this objects.
@@ -43,5 +43,5 @@ I'm looking for decomposition theorems and stability results for the signature m
 Papers :
 ----------
 
-* Decomposition of exact pointwise finite dimensional persistence bimodules [Decomposition of exact pfd persistence bimodules](https://arxiv.org/abs/1605.09726) J. Cochoy, S. Oudot.
+* [Decomposition of exact pointwise finite dimensional persistence bimodules](https://arxiv.org/abs/1605.09726) J. Cochoy, S. Oudot.
 
