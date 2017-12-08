@@ -43,5 +43,5 @@ I'm looking for decomposition theorems and stability results for the signature m
 Papers :
 ----------
 
-* Decomposition of exact pointwise finite dimensional persistence bimodules [Decomposition of exact pfd persistence bimodules](https://arxiv.org/abs/1605.09726) J. Cochoy, S. Oudot.
+* [Decomposition of exact pointwise finite dimensional persistence bimodules](https://arxiv.org/abs/1605.09726) J. Cochoy, S. Oudot.
 
