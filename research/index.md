@@ -28,7 +28,7 @@ This functor are naturaly modules over a certain ring (in the case of $\mathbb{N
 If we allow more dimensions by taking as index set
 $(\mathbb{R}^n, \leq)$ with $(x_1, \dots, x_n) \leq (y_1, \dots, y_n) \Leftrightarrow x_1 \leq y_1, \dots$, we then speak of multipersistence.
 
-If the order alternate, for example consider the quiver given by 0 \leq 1 \geq 2 \leq 3 \geq \dots$, it is called wigwag persistence.
+If the order alternate, for example consider the quiver given by $0 \leq 1 \geq 2 \leq 3 \geq \dots$, it is called zigzag persistence.
 
 We speack of persistent homology because this functor, with values in the category of vector spaces, is obtain by computing the homology of a filtered topological space.
 The simplest construction consist of taking a point cloud $P \subset \mathbb{R}^m$,
