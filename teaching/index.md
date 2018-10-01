@@ -20,7 +20,7 @@ Enseignements :
   * [Le troisième cours](https://youtu.be/3WkI73E35HEh)
   * [Le quatrième cours](https://youtu.be/IjwAeOWEUFg)
   * [Le cinquième cours](https://youtu.be/DYFygCIPlJA)
-  * Le sixième cours
+  * [Le sixième cours](https://youtu.be/MA1hdIdPu)
 
 #### Les TP
   * [TP1](./android_lesson/td1.pdf)
