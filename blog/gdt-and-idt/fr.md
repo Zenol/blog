@@ -85,4 +85,4 @@ On cherche pourquoi ça n' a pas fonctionner :)
 ==============
 
 Pour lire un peu de code, vous pouvez jeter un oeil au dépôt
- git <https://github.com/Zenol/kos/>.
+ git <https://github.com/jeremycochoy/kos/>.

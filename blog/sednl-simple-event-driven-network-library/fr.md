@@ -5,13 +5,13 @@ author:
 date: 2013/08/21
 ...
 
-[SedNL](https://github.com/Zenol/sednl "SedNL repository") est une bibliothèque
+[SedNL](https://github.com/jeremycochoy/sednl "SedNL repository") est une bibliothèque
 réseau écrite en C++11, principalement destinée à la réalisation d’applications
 réseau dont le protocole est basé sur la notion d'évènements :
 Les clients et le serveur communiquent via des évènements,
 de la forme : `"login" { username : "raccoon", password : "leaf" }`.
 
-SedNL est sous [licence ZLib](https://github.com/Zenol/sednl/blob/master/LICENCE),
+SedNL est sous [licence ZLib](https://github.com/jeremycochoy/sednl/blob/master/LICENCE),
 ce qui autorise une utilisation commerciale / closed source, sans obligation
 de redistribution de la licence avec les binaires. Elle autorise aussi la modification
 de la bibliothèque pour l'intégrer à vos projets, sans obligation de publier vos

@@ -13,4 +13,4 @@ Plus que des mots, un exemple basique d'utilisation :
 
 ![Particles with termcap_lib](data/particles.png)
 
-Les sources sont maintenant disponible dans le dépôt git <https://github.com/Zenol/mlc-termcap>.
+Les sources sont maintenant disponible dans le dépôt git <https://github.com/jeremycochoy/mlc-termcap>.

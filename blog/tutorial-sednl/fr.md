@@ -23,7 +23,7 @@ Votre client git en main, et une fois dans le répertoire de travail qui
 vous convient, récupérez les sources avec les commandes :
 
 ``` {.shell}
-git clone http://github.com/Zenol/sednl.git
+git clone http://github.com/jeremycochoy/sednl.git
 cd sednl
 ```
 
